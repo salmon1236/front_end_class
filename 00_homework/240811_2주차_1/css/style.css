@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/* 과제 1 */
+.ex_01{color: white;}
+.red{background-color: red;}
+.orange{background-color: orange;}
+.yellow{background-color: yellow;}
+.green{background-color: green;}
+.blue{background-color: blue;}
+.violet{background-color: violet;}
+.purple{background-color: purple;}
+.black{background-color: black;}
+/* 과제 2 */
+#img_02{background-color: #ff0;}
+#img_05{background-color: #f90;}
+#img_07{background-color: #6af;}
+
+/* 과제 3 */
+.ex_03 .facebook:hover{background-color: #0ff;}
+.ex_03 .instagram:hover{background-color: #f70;}
+.ex_03 .pinterest:hover{background-color: #c00;}
+.ex_03 .twitter:hover{background-color: #08f;}
+.ex_03 .youtube:hover{background-color: #f00;}
+
+/* 과제 4 */
+.ex_04 > ul > .menu1 > ul .history > a{
+    background-color: #f00; 
+    color: #fff;
+} 
+.ex_04 > ul > .menu3 > ul > .notice > a{
+    background-color: #08f;
+    color: #fff;
+}
+.ex_04 > ul > .menu2 > ul > .kids > a{background-color:#ff0;}

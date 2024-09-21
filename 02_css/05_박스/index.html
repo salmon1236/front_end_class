@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_박스</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="marginTop_cover">
+      <h3 class="marginTop_err">헤더에 margin값을 주면 안되는 이유</h3>
+    </div>
+    <!-- 
+    공간에 대한 수치의 개념
+    width, height: px, %, vw/vh, calc(50% - 10px) 
+    Content(컨텐츠) -> Padding(솜) -> Border(천) -> Margin
+    -->
+
+    <div class="box_model">내부콘텐츠</div>
+
+    <hr />
+
+    <h3>width & height</h3>
+    <p>기본단위: px, %(세로 스크롤바가 존재시 스크롤바 영역은 제외), vw/vh(세로 스크롤바가 존재시 스크롤바 영역 포함)</p>
+    <p>계산된 영역: calc(50% - 10px)</p>
+    <!-- calc를 쓸때는 '-' 앞뒤 공간을 띄어쓴다 -->
+
+    <div class="fixed_unit">고정형 단위(px)</div>
+    <div class="change_unit_per">유동형 단위(%)</div>
+    <div class="chagnge_unit_vw">유동형 단위(vw)</div>
+    <div class="calc_unit_px">계산된 고정형 단위</div>
+    <div class="calc_unit_per">계산된 유동형 단위</div>
+    <hr />
+
+
+
+
+    <h3>Padding 영역: Content 영역과 Border 사이의 공간을 지칭</h3>
+
+    <p>Padding 작성시, padding: 20px; 상우하좌(시계방향)의 padding 값이 동일한 경우 스타일 적용시 사용</p>
+    <div class="padding_space_01">
+      padding: 20px
+    </div>
+
+    <p>Padding작성 시,
+      Padding-top: 30px;
+      Padding-right: 20px;
+      Padding-bottom: 40px;
+      Padding-left: 10px;
+      으로 각각 다른 값으로 스타일을 부여하고 싶다면, 상단부터 시계방향으로 값을 넣음. <br />
+
+      padding: 30px 20px 40px 10px;
+      padding: 상 우 하 좌;
+    </p>
+
+    <div class="padding_space_02">padding: 30px 20px 40px 10px</div>
+
+    <p>Padding작성 시,
+      padding-top: 20px;
+      padding-right: 40px;
+      Padding-bottom: 20px;
+      Padding-left: 40px;
+      으로 스타일을 부여하고 싶다면 통합시 상단으로부터 시계방향으로 각각 방위에 대한 값을 부여 가능하되 통합도 가능하다. <br />
+
+      padding: 20px 40px 20px 40px;
+      padding: 상 우 하 좌;<br />
+
+      padding: 20px 40px;
+      padding: (상하) (우좌);
+    </p>
+
+    <div class="padding_space_03">padding: 20px 40px</div>
+
+    <p>Padding작성 시,
+      padding-top: 60px;
+      padding-right: 40px;
+      Padding-bottom: 20px;
+      Padding-left: 40px;
+      으로 스타일을 부여하고 싶다면 통합시 상단으로부터 시계방향으로 각각 방위에 대한 값을 부여 가능하되 통합도 가능하다.<br />
+
+      padding: 60px 40px 20px 40px;
+      padding: 상 우 하 좌;<br />
+
+      padding: 60px 40px 20px;
+      padding: 상 (우좌) 하;
+    </p>
+
+    <div class="padding_space_04">padding: 60px 40px 20px</div>
+
+    <!-- 
+    상하 동일, 우좌가 상이할 경우 각 값을 모두 선언해야 함.
+    문법 상, (상 (우좌) 하)로 인식되기에 우좌의 값이 상이할때 줄일 수 없으므로 풀어서 각각 다 적용해야함
+    ex) padding: 20px 40px 20px 30px;
+    -->
+
+    <p>부모의 영역에 패딩 영역을 부여하고 자식을 담는 구조</p>
+    <div class="padding_parent">
+      <div class="child"></div>
+    </div>
+
+    <div class="padding_parent">
+      <div class="child"></div>
+    </div>
+
+<!-- 문제1 -->
+    <div id="ex_01" class="parent_01">
+      <div class="child_01"></div>
+    </div>
+<!-- 문제2 -->
+    <div id="ex_02"class="parent_02">
+      <div class="child_02"></div>
+    </div>
+
+    <h3>border: 형태를 지정한 마지막 외곽라인</h3>
+    <p>border: 두께 선스타일 색상</p>
+
+    <div class="border_solid">border_solid</div>
+    <!-- 꽉찬 선 -->
+    
+    <div class="border_dashed">border_dashed</div>
+    <!-- 점 선 -->
+    
+    <div class="border_dotted">border_dotted</div>
+    <!-- 도트 선 -->
+    
+    <div class="border_double">border_double</div>
+    <!-- 2중 선 -->
+
+
+<!-- 이 아래는 잘 안씀 -->
+    <div class="border_groove">border_groove</div>
+    <!-- 조각음각 -->
+    <div class="border_ridge">border_ridge</div>
+    <!-- 조각양각 -->
+    <div class="border_inset">border_inset</div>
+    <!-- 음각 -->
+    <div class="border_outset">border_outset</div>
+    <!-- 양각 -->
+    
+    <hr/>
+    <!-- 응용임 체득할 것 -->
+    <h4>[응용*] border와 padding의 활용</h4>
+    <ul class="b_p_menu">
+      <li><a href="">About</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">Portfolio</a></li>
+      <li><a href="">Skill</a></li>
+    </ul>
+    <hr/>
+    
+
+
+    <h3>Margin 영역: 바깥쪽 여백 공간을 지칭. 사람과 사람 사이의 공간</h3>
+    <!-- 패딩과 개념이 똑같지만 패딩은 양수밖에 없고, 마진은 양수와 음수 둘 다 가능함 -->
+
+    <p>margin: 10px</p>
+    <div class="margin_one">margin_one</div><hr />
+    <div class="margin_one">margin_one</div><hr />
+    <!-- 마진은 좌우에서는 서로 밀어내지만, 상하에서는 더 높은값이 덮음 -->
+    <p>상하 margin 값은 겹침 현상이 발생한다. ==> margin은 top 또는 boottom 방향으로만 부여 할 것</p>
+    <p>브라우저 상단에 글자영역의 윗 방향으로 margin 부여 시, 상단 툴바 이상으로 올라가는 현상이 발생함 ==> 헤더 영역에서는 margin-top 값을 부여하지 말 것</p>
+
+    <div class="margin_two">margin_two</div><hr />
+    <div class="margin_three">margin_three</div><hr />
+
+
+    <p>margin 영역은 음수 값으로 지정이 가능(silde 이미지가 브라우저의 좌측으로 넘어가는 과정에서 적용)</p>
+    <div class="margin_minus_space">
+      <div class="left_space">
+
+      </div>
+      <div class="main_space">
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+  </body>
+</html>

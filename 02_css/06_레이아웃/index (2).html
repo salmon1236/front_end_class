@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06_레이아웃</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/09743b710b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- 
+  float(띄우다): left, right, none(defult)
+
+  display(보여주다): block, inline, inline-block, table, table-cell, inline-flex, flex(*), list(잘 안씀), grid
+
+  position(위치시키다): static, relative, absolute, fixed, sticky
+  -->
+
+    <h3>
+      float(띄우다): left / right / none => 포스트잇 같은 존재(상단은 붙어있으나
+      하단은 끼워넣는 효과가 있다)
+    </h3>
+
+    <div class="float_left">
+      <ul>
+        <li><a href="">1_menu</a></li>
+        <li><a href="">2_menu</a></li>
+        <li><a href="">3_menu</a></li>
+        <li><a href="">4_menu</a></li>
+      </ul>
+    </div>
+    <hr />
+    <div class="float_right">
+      <ul>
+        <li><a href="">1_menu</a></li>
+        <li><a href="">2_menu</a></li>
+        <li><a href="">3_menu</a></li>
+        <li><a href="">4_menu</a></li>
+      </ul>
+    </div>
+
+    <h4>float을 활용한 헤더 구성하기</h4>
+
+    <div class="adidas_header_01">
+      <div class="logo">
+        <a href="https://www.adidas.co.kr/">
+          <img src="./img/Adidas-Logo-Free-PNG-Image.png" alt="아디다스 로고" />
+        </a>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="">Men</a>
+          </li>
+          <li>
+            <a href="">Women</a>
+          </li>
+          <li>
+            <a href="">Kids</a>
+          </li>
+          <li><a href="">Sports</a>></li>
+          <li>
+            <a href="">Brands</a>
+          </li>
+          <li>
+            <a href="">Outlet</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Display: block | inline | inline-block | none</h3>
+    <p>displat: blodc=> 한줄을 모두 가져간다.</p>
+
+    <div id="display">
+      <div class="img_box bg1">bg1</div>
+      <div class="img_box bg2">bg2</div>
+      <div class="img_box bg3">bg3</div>
+      <div class="img_box bg4">bg4</div>
+    </div>
+
+    <p>
+      inline: 인라인의 가로배치 성질 가지면서 블록의 공간 개념(width, height)도
+      설정 가능하다
+    </p>
+
+    <div class="display_inline">
+      <span class="d_inline">txt1</span>
+      <span class="d_inline">txt2</span>
+      <span class="d_inline">txt3</span>
+    </div>
+
+    <h4>공간의 배치</h4>
+    <div class="display_center">
+      <div class="wrap">
+        <div class="img_box bg1">bg1</div>
+        <div class="img_box bg2">bg2</div>
+        <div class="img_box bg3">bg3</div>
+        <div class="img_box bg4">bg4</div>
+      </div>
+    </div>
+    <hr />
+
+    <h4>display:none => 공간을 사라지게 만듬</h4>
+    <div class="display_space">
+      <div class="dark_bg">
+        <p>Snoopy</p>
+      </div>
+    </div>
+    <hr />
+
+    <h3>display: table / table-cell ( margin (X) padding(O) )</h3>
+    <table>
+      <tr>
+        <td>
+          <div>1)반려견 동행하기</div>
+        </td>
+      </tr>
+    </table>
+    <br />
+
+    <div class="d_table">
+      <div class="d_tableCell">
+        <div>2)반려견 동행하기</div>
+      </div>
+    </div>
+
+    <div class="banner">
+      <div>
+        <h4>반려견 동행하기</h4>
+        <button>더보기</button>
+      </div>
+    </div>
+
+    <h3>display: flex; => 부모가 통제를 해주는 설정</h3>
+    <h4>부모의 통제</h4>
+    <div id="flex1">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+    </div>
+
+    <h4>헤더 구성하기</h4>
+
+    <div class="flex_header1">
+      <div class="wrap">
+        <div class="logo">
+          <a href="">
+            <img src="./img/Adidas-Logo-Free-PNG-Image.png" alt="" />
+          </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="">MEN</a></li>
+            <li><a href="">WOMEN</a></li>
+            <li><a href="">KIDS</a></li>
+            <li><a href="">EVENT</a></li>
+          </ul>
+        </div>
+        <div class="sign">
+          <ul>
+            <li><a href="">로그인</a></li>
+            <li><a href="">회원가입</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h4>컨텐츠의 2행 구성</h4>
+    <div class="flex-content1">
+      <div class="wrap">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+      </div>
+    </div>
+
+    <h4>자식의 대한 flex 통제시</h4>
+    <div class="flex_child1">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+    </div>
+
+    <h3>position</h3>
+    <p>
+      static: 일반적인 적층개념 - 작성하지 않아도 적용되는 기본값 <br />
+      relative: 상대적인 좌표값을 설정<br />
+      absolute: 선언된 영역을 절대좌표의 위치 배치 가능<br />
+      fixed: 현재 보여지는 브라우저 기준으로 공간을 배치<br />
+    </p>
+    <p>
+      css에 z-index 값을 부여하면 대상을 화면의 전면부 또는 후면부로 배치 가능
+    </p>
+
+    <h4>relative</h4>
+    <hr />
+
+    <div class="po_static">static-space</div>
+    <div class="po_relative">relative-space</div>
+    <div class="po_absolute">po_absolute</div>
+    <div class="po_rel_space">
+      <div class="po_abs_space"></div>
+    </div>
+    <!-- absolute는 relative 영역 안에 넣으면 상대좌표로 바뀜 -->
+
+    <div class="ad_photo">
+      <img src="./img/awards.png" alt="">
+      <h4>2024 어워드 수상</h4>
+    </div>
+    
+    <h4>fixed: 브라우저의 기준선으로 통제하여 위치</h4>
+    <div class="po_fixed">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+    <div class="model_popup">
+      <h3>팝업창</h3>
+    </div>
+  </body>
+</html>

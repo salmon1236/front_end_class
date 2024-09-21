@@ -1,0 +1,180 @@
+CSS - review-1
+
+과제19)[박스 공간 + 배경 이미지 + display:inline-block; 적용] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스(#ex_19) 공간(가로, 세로 값 기본값 적용 - 넣지 말 것!)에 padding을 상하 30px로 적용하고 배경색상 #000로 적용하시오.
+
+조건3. 내부 박스(.wrap) 공간(가로 1000px / 세로 auto / 브라우저 기준 중앙 정렬) 구성 후, 그 다음 단계 내부에 타이틀(.title)에 폰트 크기 40px / 하단 패딩 20px / 하단 라인(border) 1px solid #d50037을 적용하고 하단 콘텐츠 공간(.cont)에는 상단 패딩 20px 적용하시오.
+
+조건4. 하단 공간 내부에 포함된 텍스트 영역('Noto Sans KR' 구글 폰트 서체 적용)의 타이틀(.cont_title)은 폰트 크기 40px / 하단 패딩 20px / 폰트 색상 흰색 적용, 서브타이틀(.cont_sub)은 폰트 크기 24px / 하단 패딩 10px / 폰트 굵기 300 / 폰트 색상 #d50037 적용, 문단 내용 폰트 크기 18px / 폰트 굵기 100 / 폰트 색상 흰색을 적용하시오.
+
+조건5. 우측의 이미지 공간은 가로 350px / 세로 450px / 해당 이미지 배경으로 적용하고 이미지 공간에 맞춰 사이즈 조정 및 중앙 위치시키시오. 추가로 텍스트 공간으로부터 좌측 50px 이격하시오.
+
+조건6. 두 내부 공간을 inline-block으로 정렬하고 세로방향에서 중앙에 위치 시키시오.
+
+[HTML 구문]
+		<div id="ex_19">
+			<div class="wrap">
+				<h2 class="title">커피 이야기</h2>
+				<div class="cont">
+					<div class="txt_part">
+						<h3 class="cont_title">TWOSOME COFFEE STORY</h3>
+						<h4 class="cont_sub">내 취향이 담긴 커피, 투썸플레이스에는
+							내 취향을 담아 섬세하게 만든
+							나만의 커피가 있습니다.</h4>
+						<p class="cont_txt">투썸플레이스 큐그레이더(Q-Grader)는 좋은 산지의 신선한 원두만을 선별해 각각 다른 개성의 세가지 블렌드를 제공합니다. 
+							원두 타입별 최적의 밸런스를 맞춘 로스팅 포인트, 최상의 에스프레소 추출 기술이 더해져 투썸플레이스만의 커피가 완성됩니다.</p>
+					</div>
+					<div class="img_part"></div>
+				</div>
+			</div>
+		</div>
+	
+==============================================================
+
+ 
+과제20)[박스 공간 + 배경 이미지 + display:inline-block; 적용] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스(#ex_19) 공간(가로, 세로 값 기본값 적용 - 넣지 말 것!)에 padding을 상하 30px로 적용하고 배경색상 #eee로 적용하시오.
+
+조건3. 내부 박스(.wrap) 공간(가로 1200px / 세로 auto / 브라우저 기준 중앙 정렬) 구성 후, 그 다음 단계 내부에 타이틀(.title)에 폰트 크기 40px / 하단 패딩 20px / 하단 라인(border) 1px solid #d50037을 적용하고 하단 콘텐츠 공간(.cont)에는 상단 패딩 20px 적용하시오.
+
+조건4. 하단 공간 내부는 네 가지의 영역(.box)이 동일한 가로값 / 좌우측으로 10px을 띄어서 적용 및 가로배치 하시오. (inline-block을 사용할 것 + 수직방향 위치 조정할 것)
+
+조건5. 하단 공간 내부에 포함된 이미지 공간은 세로 320px / 해당 이미지 배경으로 적용하고 이미지 공간에 맞춰 사이즈 조정 및 중앙 위치시키시오. 추가로 내부 블랙 영역(배경색상 #000 / 폰트색상 흰색)을 각 이미지의 좌상단으로부터 top:10px; left:-5px 위치시키고 글자로부터 상하 패딩 5px / 좌우 패딩 10px로 스타일 적용하시오.
+
+조건6. 하단 공간 내부에 포함된 각 텍스트 영역('Noto Sans KR' 구글 폰트 서체 적용)에 상단 하단으로 공간(상하 패딩 20px)을 구성하고 타이틀은 폰트 크기 19px / 하단 패딩 10px / 폰트 색상 #333 적용, 영문명 타이틀은 (.tit_en)은 폰트 크기 13px / 하단 패딩 20px / 폰트 색상 #999 적용, 문단 내용 폰트 크기 15px / 폰트 굵기 300 / 폰트 색상 #555, 추가 설명 문장은 폰트 크기 13px / 폰트 굵기 100 / 폰트 색상 #999을 적용하시오.
+
+조건6. 두 내부 공간을 inline-block으로 정렬하고 세로방향에서 상단으로 맞추시오.
+
+[HTML 구문]
+		<div id="ex_20">
+			<div class="wrap">
+				<h2 class="title">시그니처 커피&음료</h2>
+				<div class="cont">
+
+					<div class="box">
+						<div class="cont_img">
+							<span>Espresso</span>
+						</div>
+						<div class="cont_txt">
+							<h3>스페니쉬 연유 라떼</h3>
+							<span class="tit_en">Spanish Condensed Milk Café Latte</span>
+							<p>평화로운 유럽 초원의 감성을 담은 부드럽고 달콤한 스페니쉬 연유라떼</p>
+							<span class="add_comment">스페니쉬 라떼 : 야외 활동이 많은 스페인 목동들이 피곤함을 해소하기 위해 즐겨 마시던 커피</span>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="cont_img">
+							<span>Espresso</span>
+						</div>
+						<div class="cont_txt">
+							<h3>롱블랙</h3>
+							<span class="tit_en">Long Black</span>
+							<p>에스프레소보다 짧게 추출한 리스트레또샷을 넣어 깊은 풍미와 풍부한 크레마를 느낄 수 있는 매력적인 커피</p>
+							<span class="add_comment">롱블랙 : 호주와 뉴질랜드를 시작으로 영국 등 유럽에서 즐기는 커피로 아메리카노보다 진한 풍미로 즐기는 커피</span>
+						</div>
+					</div>
+					
+					<div class="box">
+						<div class="cont_img">
+							<span>Non Coffee</span>
+						</div>
+						<div class="cont_txt">
+							<h3>허니 레몬티</h3>
+							<span class="tit_en">Honey Lemon Tea</span>
+							<p>진한 TWG 프렌치 얼그레이의 향과 달콤한 꿀, 상큼한 레몬이 녹아든 향긋한 티</p>
+						</div>
+					</div>
+					
+					<div class="box">
+						<div class="cont_img">
+							<span>Non Coffee</span>
+						</div>
+						<div class="cont_txt">
+							<h3>스트로베리 피치 프라페</h3>
+							<span class="tit_en">Strawberry Peach Frappe</span>
+							<p>딸기와 복숭아의 상큼함이 조화롭게 어우러져 달콤하고 시원하게 즐길 수 있는 과일 프라페</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	
+==============================================================
+
+과제21)[박스 공간 + 배경 이미지 + display:inline-block; + position 적용] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스(#ex_22) 공간(가로, 세로 값 기본값 적용 - 넣지 말 것!)에 padding을 상하 40px로 적용하시오.
+
+조건3. 내부 박스(.wrap) 공간(가로 1400px / 세로 auto / 브라우저 기준 중앙 정렬) 구성 후, 그 다음 단계 내부에 상단 공간(.cont)은 스타일 부여하지 마시오.
+
+조건4. 하단 공간의 각 내부 영역은 동일한 가로값을 적용하되 calc() 스타일을 적용하시오. 좌우 margin 40px을 제외한 영역으로 가로 공간을 구성 / 세로 auto / inline-block으로 구성하고 세로 방향에서 중앙 정렬하도록 구성하시오.
+
+조건5. 좌측의 이미지 공간은 세로 700px / 해당 이미지 배경으로 적용하고 이미지 공간에 맞춰 사이즈 조정 및 중앙 위치시키시오. 내부 아이콘은 position을 활용하여 이미지 기준으로 calc()를 적용하여 상단으로부터 중앙 / 좌측으로부터 중앙으로 위치시키고 가로만 100px로 적용하시오.
+
+조건6. 우측의 텍스트 공간에서 폰트 색상 #222로 통일하고 텍스트 영역의 첫번째 단어는 폰트 크기 22px / 하단 padding 20px / 폰트 굵기 100으로 적용, 타이틀은 폰트 크기 24px / 폰트 굵기 300으로 적용하고 문단은 폰트 크기 16px / 폰트 굵기 100을 적용하시오. 중간에 위치한 구분라인은 가로 60px / 세로 2px / 배경색상 rgb(228, 37, 37) / 상하 마진 40px 적용하시오.
+
+[HTML 구문]
+		<div id="ex_21">
+			<div class="wrap">
+				<div class="cont">
+					<div class="img_part">
+						<img src="./img/Bang-Olufsen.png" alt="B&O Icon">
+					</div>
+					<div class="txt_part">
+						<h5>WEATHERPROOF</h5>
+						<h3>Waterproof and sweat-resistant</h3>
+						<div class="mini_line"></div>
+						<p>Use Beoplay E8 Sport in all weather conditions without compromising your sound experience. Built using superior materials, Beoplay E8 Sport wireless earphones are IP57 certified sweat-resistant and completely waterproof down to one meter for 30 minutes. And they're easy to clean after your workout.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+==============================================================
+
+과제22)[박스 공간 + 배경 이미지 + display:inline-block; + position 적용] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스(#ex_22) 공간(가로, 세로 값 기본값 적용 - 넣지 말 것!)에 padding을 상하 40px로 적용하시오.
+
+조건3. 내부 박스(.wrap) 공간(가로 1100px / 세로 auto / 브라우저 기준 중앙 정렬 / 배경색상 #000) 구성 후, 그 다음 단계 내부에 상단 공간(.top)에 높이 360px / 배경 이미지(공간 사이즈 적용 / 중앙 위치) 적용하시오. 하단 공간은 상하 padding 40px 적용
+
+조건4. 하단 공간의 각 내부 영역은 좌우 margin 40px을 제외한 영역으로 가로 공간을 구성 / 세로 300px / inline-block으로 구성하고 세로방향에서 중앙 정렬하도록 구성하시오.
+
+조건5. 좌측의 이미지 공간은 해당 이미지 배경으로 적용하고 이미지 공간에 맞춰 사이즈 조정 및 중앙 위치시키시오. 내부 아이콘은 position을 활용하여 이미지 기준으로 상단으로부터 20px / 좌측으로부터 20px을 이격하고 가로만 50px로 적용하시오.
+
+조건6. 우측의 텍스트 공간에서 원형 이미지는 position을 활용하여 텍스트 박스 기준으로 상단으로 -160px / 가로방향으로 중앙에 위치 / 가로 240px으로 적용시키고 텍스트 영역은 display:table; 과 display:table-cell;을 활용하여 내부 중앙에 위치시키시오.
+
+조건7. 텍스트 영역의 타이틀은 폰트 크기 22px / 하단 padding 20px / 폰트 색상 흰색으로 적용하고 문단은 폰트 크기 17px / 폰트 굵기 100 / 좌우 padding 20px / 폰트 색상 흰색을 적용하시오.
+
+[HTML 구문]
+		<div id="ex_22">
+			<div class="wrap">
+				<div class="top"></div>
+				<div class="bottom">
+					<div class="img_part">
+						<img src="./img/starbucks_logo.png" alt="스타벅스 로고">
+					</div>
+					<div class="txt_part">
+						<img src="./img/higherAravica_bigImg_bg.png" alt="원형 아이콘">
+						<div class="d_table">
+							<div class="d_tableCell">
+								<h3>최상의 커피는 최상의 원두로부터만 탄생합니다.</h3>
+								<p>스타벅스 아라비카 원두는 일반 아라비카 원두와는 다릅니다. 
+								스타벅스는 당사의 원두가 최상의 품질을 갖추도록 모든 단계에서 최선의 노력을 기울입니다.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+==============================================================
+

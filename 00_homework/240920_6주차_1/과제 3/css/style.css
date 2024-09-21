@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/* 공통 스타일 */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+section,
+article,
+nav,
+aside,
+footer {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 메인 섹션 설정 */
+#color-display {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  position: relative;
+}
+

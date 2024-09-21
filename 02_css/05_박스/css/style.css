@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+html 
+body, {
+  margin: 0;
+}
+
+.box_model {
+  padding: 10px;
+  background-color: #afa;
+  border: 2px solid #f70;
+  margin: 20px;
+}
+
+
+
+
+/* width & height */
+
+.fixed_unit {
+  width: 200px;
+  height: 100px;
+  background-color: #aff;
+  margin: 0 auto;
+  /* margin 상하 margin 좌우 */
+  /* margin: 0 auto(m0-a): 정확하게 알고있지 않은 마진값을 양쪽으로 자동 분배 */
+  text-align: center;
+  line-height: 100px;
+}
+.change_unit_per {
+  width: 75%;
+  height: 100px;
+  background-color: #aaf;
+margin: 0 auto;
+text-align: center;
+line-height: 100px;
+}
+.chagnge_unit_vw {
+  /* 스크롤바 영역이 대략 8px이므로 양쪽으로 4px씩 나눠가짐 */
+  width: 75vw;
+  height: 100px;
+  background-color: #afa;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+}
+
+.calc_unit_px {
+  /* 사용을 지향 할 것 */
+  width: calc(300px - 100px);
+  height: 100px;
+  background-color: #ffa;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+}
+.calc_unit_per {
+  /* 사용을 지향 할 것 */
+  width: calc(50% - 20px);
+  height: 100px;
+  background-color: #faa;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+}
+
+
+/* Padding 영역 */
+.padding_space_01 {
+width: 300px;
+height: 300px;
+background-color: #6af;
+margin: 0 auto;
+text-align: center;
+line-height: 300px;
+padding: 20px;
+}
+
+.padding_space_02 {
+  width: 300px;
+height: 300px;
+background-color: #6af;
+margin: 0 auto;
+text-align: center;
+line-height: 300px;
+padding: 30px 20px 40px 10px
+}
+
+.padding_space_03 {
+  width: 300px;
+  height: 300px;
+  background-color: #6af;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 300px;
+  padding: 20px 40px
+}
+
+.padding_space_04 {
+  width: 300px;
+  height: 300px;
+  background-color: #6af;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 300px;
+  padding: 60px 40px 20px;
+}
+
+
+.padding_parent{
+  width: 300px;
+  height: 300px;
+  background-color: #f70;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 300px;
+}
+.padding_parent .child {
+  width: 100%;
+  height: 100%;
+  background-color: #aaf;
+}
+
+
+
+/* 문제1 */
+#ex_01.parent_01 {
+  width: 400px;
+  height: 200px;
+  background-color: #ff0;
+  padding: 100px;
+}
+
+#ex_01.parent_01 .child_01 {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f;
+}
+
+
+
+/* 문제2 */
+#ex_02.parent_02 {
+  width: 310px;
+  height: 330px;
+  background-color: #0f0;
+  padding: 10px 50px 60px 40px;
+}
+#ex_02.parent_02 .child_02 {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f;
+}
+
+
+
+/* border 영역 */
+.border_solid {
+width: 200px;
+height: 200px;
+background-color: #f99;
+text-align: center;
+line-height: 200px;
+margin: 0 auto;
+border: 5px solid #ddd;
+/* border: 5px solid transparent; */
+/* transparent: 투명한 공간 */
+
+/* hover시 원본에 border공간이 있어야 hover시 총 공간이 변하지 않음 */
+}
+
+.border_solid:hover {
+  border: 5px solid #f00;
+}
+
+
+.border_dashed {
+  width: 200px;
+height: 200px;
+background-color: #99f;
+text-align: center;
+line-height: 200px;
+margin: 0 auto;
+border: 5px dashed #f00;
+}
+
+.border_dotted {
+  width: 200px;
+height: 200px;
+background-color: #99f;
+text-align: center;
+line-height: 200px;
+margin: 0 auto;
+border: 5px dotted #f00;
+}
+
+.border_double {
+  width: 200px;
+height: 200px;
+background-color: #99f;
+text-align: center;
+line-height: 200px;
+margin: 0 auto;
+border: 10px double #f00;
+}
+
+.border_groove {
+  width: 200px;
+  height: 200px;
+  background-color: #9f9;
+  text-align: center;
+  line-height: 200px;
+  margin: 0 auto;
+  border: 10px groove #f00;
+}
+
+.border_ridge {
+  width: 200px;
+  height: 200px;
+  background-color: #9f9;
+  text-align: center;
+  line-height: 200px;
+  margin: 0 auto;
+  border: 10px ridge #f00;
+}
+
+.border_inset {
+  width: 200px;
+  height: 200px;
+  background-color: #9f9;
+  text-align: center;
+  line-height: 200px;
+  margin: 0 auto;
+  border: 10px inset #f00;
+}
+
+.border_outset {
+  width: 200px;
+  height: 200px;
+  background-color: #9f9;
+  text-align: center;
+  line-height: 200px;
+  margin: 0 auto;
+  border: 10px outset #f00;
+}
+
+
+/* 응용임 체득할 것 */
+.b_p_menu {
+padding: 0;
+margin: 0;
+list-style: none;
+margin-bottom: 20px;
+}
+
+.b_p_menu li {
+display: inline-block;
+}
+
+.b_p_menu li a {
+  color: #777;
+  text-decoration: none;
+  padding-bottom: 10px;
+  border: 2px solid transparent;
+}
+
+.b_p_menu li:hover a {
+  color: red;
+border-bottom: 2px solid red;
+}
+
+
+
+/* Margin 영역 */
+.margin_one {
+  width: 200px;
+  height: 200px;
+  background-color: #faf;
+  line-height: 200px;
+  text-align: center;
+
+  margin: 10px;
+}
+
+.margin_two {
+  width: 200px;
+  height: 200px;
+  background-color: #faf;
+  line-height: 200px;
+  text-align: center;
+
+  margin: 10px 20px;
+}
+
+.margin_three {
+  width: 200px;
+  height: 200px;
+  background-color: #faf;
+  line-height: 200px;
+  text-align: center;
+
+  margin: 10px 20px 30px;
+  /* 상 (우좌) 하 */
+}
+
+
+.margin_minus_space {
+  padding: 50px;
+  background-color: #ccc;
+  display: flex;
+  /* display: flex= 선언한 순간 가로정렬 */
+  
+}
+
+.left_space {
+  width: 200px;
+  height: 100px;
+  background-image: url(../img/university_01.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-left: -150px;
+}
+.main_space {
+  width: 200px;
+  height: 100px;
+  background-image: url(../img/university_02.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  
+}
+
+.marginTop_cover {
+  width: 100%;
+  height: 80px;
+  background-color: #fc5;
+}
+
+.marginTop_err {
+  /* margin-top: 50px; */
+  margin: 0;
+  padding-top: 20px;
+}
+

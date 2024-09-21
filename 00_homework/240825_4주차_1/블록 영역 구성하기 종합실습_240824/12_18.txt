@@ -1,0 +1,197 @@
+과제12)[박스 공간 + 배경 이미지] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스 공간에 padding을 상하좌우 20px로 적용하고 배경색상을 #a11로 적용하시오.
+
+조건3. 각 내부의 이미지 공간은 가로 300px, 세로 400px로 구성하고 이미지 사이즈를 맞추고, 중앙 배치하시오. 해당하는 이미지 넣을 것
+
+[HTML 구문]
+		<div id="ex_12">
+			<div></div>
+			<div></div>
+		</div>
+	
+
+
+
+=========================================================================
+
+
+과제13)[박스 공간 + 배경 이미지 + float 적용] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스 공간(세로 400px)에 padding을 상하좌우 20px로 적용하고 외곽라인(border)을 1px solid #a11로 적용하시오. (배경색상은 없음)
+
+조건3. 각 내부의 이미지 공간은 가로 300px, 세로 400px로 구성하고 이미지 사이즈를 맞추고, 중앙 배치하시오. 해당하는 이미지 넣을 것
+
+조건4. 두 개의 이미지 공간에 float을 활용하여 가로 배치하시오.
+
+[HTML 구문]
+		<div id="ex_13">
+			<div></div>
+			<div></div>
+		</div>
+
+
+
+=========================================================================
+
+
+과제14)[박스 공간 + 배경 이미지 + float 적용] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스 공간(가로 1200px / 세로 400px / 브라우저 기준 중앙배치)에 padding을 상하 40px 및 배경색상 #fdd로 적용하시오.
+
+조건3. 각 내부의 이미지 공간은 가로 세가지 이미지가 모두 가로방향 한 줄에서 나오도록 구성하되 각 이미지 공간을 기준으로 양쪽 마진 10px 적용, 세로 400px로 구성하고 이미지 사이즈를 맞추고, 배경의 위치는 가로방향 50% / 세로방향 25% 배치하시오. 해당하는 이미지 넣을 것
+
+조건4. 두 개의 이미지 공간에 float을 활용하여 가로 배치하시오.
+
+[HTML 구문]
+		<div id="ex_14">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	
+
+
+
+=========================================================================
+
+
+과제15)[박스 공간 + 배경 이미지 + float 적용] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스 공간(가로 1200px / 세로 400px / 브라우저 기준 중앙배치)에 padding을 상하 40px 및 배경색상 #fdd로 적용하시오.
+
+조건3. 각 내부의 공간(.box)은 가로 네가지 콘텐츠를 모두 가로방향 한 줄에서 나오도록 구성하되 각 이미지 공간을 기준으로 양쪽 마진 10px 적용, 세로 440px로 구성하시오. 이미지 사이즈를 맞추고, 배경의 위치는 가로방향 50% / 세로방향 25% 배치하시오. 해당하는 이미지 넣을 것
+
+조건4. 각 공간의 내부 이미지 공간은 가로 100% / 세로 400px로 구성하고 이미지 사이즈를 맞추고, 배경의 위치는 가로방향 50% / 세로방향 25% 배치하시오. 해당하는 이미지 넣을 것
+
+조건5. 각 공간의 내부 타이틀 공간은 line-height를 40px로 구성하고 폰트 크기 22px / 'Poppins' 서체 적용 / 폰트 굵기 500 / 가로 방향 중앙 배치하시오.
+
+[HTML 구문]
+		<div id="ex_15">
+			<div class="box">
+				<div class="img"></div>
+				<h4>Loewe</h4>
+			</div>
+			<div class="box">
+				<div class="img"></div>
+				<h4>Dior Men</h4>
+			</div>
+			<div class="box">
+				<div class="img"></div>
+				<h4>Ahluwalia</h4>
+			</div>
+			<div class="box">
+				<div class="img"></div>
+				<h4>MSGM</h4>
+			</div>
+		</div>
+
+
+
+=========================================================================
+
+
+
+과제16)[박스 공간 + 배경 이미지 + float 적용] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스 공간(가로 800px / 세로 400px / 중앙배치)에 padding을 상하좌우 20px로 적용하고 배경색상 #caa로 적용하시오.
+
+조건3. 내부 이미지 공간은 가로 300px, 세로 400px로 구성하고 이미지 사이즈를 맞추고, 중앙 배치 및 해당하는 이미지를 넣으시오. (float 적용)
+
+조건4. 내부 텍스트 공간은 가로 400px, 세로 400px의 공간을 구성하고 좌측 이미지 공간으로부터 100px을 떨어지도록 구성하시오. (float 적용)
+
+조건5. 내부 텍스트 공간 내부의 타이틀은 폰트크기 32px / 구글 폰트 'Great Vibes' 적용 / 색상 흰색 / 상하로 padding 20px 적용하시오.
+
+조건6. 내부 텍스트 공간 내부의 문단은 폰트크기 17px / 구글 폰트 'Poppins' 적용 / 색상 흰색 / 폰트 두께 300을 적용하시오.
+
+[HTML 구문]
+		<div id="ex_16">
+			<div> class="img_part"></div>
+			<div> class="txt_part">
+				<h4>Prada</h4>
+				<p>Can we chalk up all the suits with shorts to the continued effect of Zoom dressing? 
+				The blazer-up-top-and-airy-boxers-on-the-bottom look appeared across the European runways, reconfiguring suiting for a more casual lifestyle.</p>
+			</div>>
+		</div>
+	
+
+
+
+
+=========================================================================
+
+
+과제17)[박스 공간 + 배경 이미지 + float 적용] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스 공간(가로 800px / 세로 auto / 중앙배치)에 padding을 상하좌우 20px로 적용하고 배경색상 #caa로 적용하시오. after 공간을 구성하여 float의 영향을 해제하여 배경색상이 나오도록 구성하시오. (힌트 clear:both;)
+
+조건3. 내부 이미지 공간은 가로 300px, 세로 400px로 구성하고 이미지 사이즈를 맞추고, 중앙 배치 및 해당하는 이미지를 넣으시오. (float 적용)
+
+조건4. 내부 텍스트 공간은 가로 400px, 세로 400px의 공간을 구성하고 좌측 이미지 공간으로부터 100px을 떨어지도록 구성하시오. (float 적용)
+
+조건5. 내부 텍스트 공간 내부의 타이틀은 폰트크기 32px / 구글 폰트 'Great Vibes' 적용 / 색상 흰색 / 상하로 padding 20px 적용하시오.
+
+조건6. 내부 텍스트 공간 내부의 문단은 폰트크기 17px / 구글 폰트 'Poppins' 적용 / 색상 흰색 / 폰트 두께 300을 적용하시오.
+
+[HTML 구문]
+		<div id="ex_17">
+			<div> class="img_part"></div>
+			<div> class="txt_part">
+				<h4>Shop the Crisscross-Denim Trend Because It’s Here to Stay</h4>
+				<p>Straight-leg, skinny, and boyfriend jeans are mainstay silhouettes in most denim wardrobes. 
+				But for an au courant refresh, look no further than the best crisscross jeans of the season. 
+				Featuring overlapping waists from high-rise to low-slung, this asymmetrical denim look flaunts a freshness that reads subtle and not overly trendy.</p>
+			</div>>
+		</div>
+	
+
+
+
+=========================================================================
+
+
+
+과제18)[박스 공간 + 배경 이미지 + float 적용] 아래의 조건을 확인하여 <결과물> 같이 구성하시오.
+조건1. 아래의 HTML 구문을 작성하시오.
+
+조건2. 외부 박스 공간(가로 800px / 세로 400px / 중앙배치)에 padding을 상하좌우 20px로 적용하고 배경색상 #caa로 적용하시오.
+
+조건3. 내부 상단과 하단 공간은 after 공간을 구성하여 float의 영향을 해제시키시오. (힌트 clear:both;)
+
+조건4. 각 내부 공간의 이미지 공간은 가로 300px, 세로 400px로 구성하고 이미지 사이즈를 맞추고, 중앙 배치 및 해당하는 이미지를 넣으시오. (float 적용)
+
+조건5. 내부 텍스트 공간은 가로 400px, 세로 400px의 공간을 구성하고 좌 또는 우측 이미지 공간으로부터 100px을 떨어지도록 구성하시오. (float 적용)
+
+조건6. 내부 텍스트 공간 내부의 타이틀은 폰트크기 32px / 구글 폰트 'Great Vibes' 적용 / 색상 흰색 / 상하로 padding 20px 적용하시오.
+
+조건7. 내부 텍스트 공간 내부의 문단은 폰트크기 17px / 구글 폰트 'Poppins' 적용 / 색상 흰색 / 폰트 두께 300을 적용하시오.
+
+[HTML 구문]
+		<div id="ex_18">
+			<div class="top">
+				<div class="img_part"></div>
+				<div class="txt_part">
+					<h4>Rick Owens</h4>
+					<p>A year of covering it up has given way to showing it all off. 
+					Silk shirts at Etro were unbuttoned to the navel, while the guys at Burberry had no shirts at all. 
+					And don’t forget Jacquemus’s crop top.</p>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="img_part"></div>
+				<div class="txt_part">
+					<h4>Burberry</h4>
+					<p>In a season surprisingly short on jackets, coats, and hoodies, knitwear became the predominant method of getting graphics across. 
+					At JW Anderson crests and strawberries nodded to British heritage, 
+					while Hermès and Giorgio Armani presented abstract flower designs that brought a gentle femininity to menswear.</p>
+				</div>
+			</div>
+		</div>
+	
+

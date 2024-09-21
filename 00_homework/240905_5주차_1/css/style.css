@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* 공통 스타일 */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+header,
+section,
+article,
+nav,
+aside,
+footer {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+
+#space {
+  height: 300px;
+}
+
+#sk_menu {
+  width: 100%;
+  height: 60px;
+  background-color: #777;
+  position: fixed;
+}
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 44px;
+  padding: 6px 0 0 20px;
+  font-size: 0px;
+}
+.logo img {
+  min-width: 100%;
+  height: 40px;
+  vertical-align: top;
+}
+
+.menu {
+}
+.menu > ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu > ul > li {
+  padding: 10px 0 14px;
+  position: relative;
+}
+.menu > ul > li > a {
+  color: #333;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0;
+  line-height: 14px;
+}
+.menu > ul > li ul {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  /* background-color: #fff; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transition: 3s;
+}
+.menu > ul > li:hover ul {
+  display: block;
+}
+.menu ul > li ul li {
+  padding: 50px 20px;
+}
+.menu > ul > li > ul > li > a {
+}
+.right ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.right ul li {
+  margin: 0 10px;
+}
+
+.right ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}

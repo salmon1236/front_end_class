@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_html_media</title>
+  </head>
+  <body>
+    <h2>멀티미디어 활용</h2>
+    <h3>vidio tag의 활용</h3>
+    <video src="./contents/Beosound_A1_2nd_Gen.mp4" autoplay playsinline muted loop controls style="width: 100%;">
+      <source type="vidio/mp4" src="./contents/Beosound_A1_2nd_Gen.mp4" />
+      <source type="vidio/ogv" src="./contents/Beosound_A1_2nd_Gen.ogv" />
+      <source type="vidio/webm" src="./contents/Beosound_A1_2nd_Gen.webm" />
+      your Browser is not supported
+    </video>
+
+    <video src="./contents/Beosound_A1_2nd_Gen.mp4 "
+    autoplay 
+    playsinline
+    muted 
+    loop 
+    controls 
+    style="width: 100%;"></video>
+
+    <hr />
+    
+    <h3>유튜브 영상 연동하기</h3>
+    <h4>video 태그를 구성하는 속성들</h4>
+    <p>#1. source 라는 태그를 활용하여 영상의 다양한 형식을 가져올 수 있다. 지원 불가 브라우저의 경우 반드시 텍스트 문구로 표기할 것</p>
+    <p>#2. 브라우저가 로딩된 후 영상이 자동 재생되기 위해서는 video 태그 내부에 autoplal 라는 속성을 작성한다. (ios의 경우 버전 속성 호환상 playsinline을 넣을것)</p>
+    <p>loop: 반복재생 / muted: 음소거 / controls: 재생과 일시정지, 정지에 대한 컨트롤러</p>
+    <div>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/ACRAptyOwls?rel=0&autoplay=1&loop=1;
+      playlist=ACRAptyOwls&mute=1" 
+      title="FPV Drone Flight through Beautiful Iceland Canyon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      </iframe>
+    </div>
+
+    <h3>음성파일 재생</h3>
+    <div>
+      <audio src="./contents/aud_03.mp3" 
+      autoplay 
+      loop 
+      playsinline 
+      controls>
+    </audio>
+    </div>
+
+
+  </body>
+</html>

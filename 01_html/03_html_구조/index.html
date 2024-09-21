@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_HTML_구조</title>
+  </head>
+  <body style="margin: 0">
+    <div style="height: 100px; background-color: #aff">Header</div>
+    <header style="height: 100px; background-color: #8cc">Header</header>
+
+    <div style="height: 180px; background-color: #faa">Content1</div>
+    <main style="height: 180px; background-color: #d99">Content2</main>
+    <section style="height: 180px; background-color: #afa">Content3</section>
+    <article style="height: 180px; background-color: #aaf">Content4</article>
+
+    <footer style="height: 80px; background-color: #aaa">Footer</footer>
+
+    <hr />
+    <p>div -> header, nav, main, section, article, aside, footer</p>
+    <p>header > nav > ul > li > a</p>
+    <p>main(h1~h6의 타이틀 태그를 동반시켜야함) > section > article</p>
+    <p>main(h1~h6의 타이틀 태그를 동반시켜야함) > section > aside</p>
+
+    <hr />
+    <header>
+      <div id="logo"><a href="./">로고</a></div>
+      <nav>
+        <ul>
+          <li><a href="url 주소1">메뉴1</a></li>
+          <li><a href="url 주소2">메뉴2</a></li>
+          <li><a href="url 주소3">메뉴3</a></li>
+        </ul>
+      </nav>
+      <div id="my">
+        <ul>
+          <li><button>로그인</button></li>
+          <li><button>회원가입</button></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section id="banner">Banner Space</section>
+      <section id="cont1">Contents1</section>
+      <section id="cont2">Contents2</section>
+      ...
+    </main>
+    <footer>
+      <p>&copy; corp.ltd</p>
+    </footer>
+  </body>
+</html>

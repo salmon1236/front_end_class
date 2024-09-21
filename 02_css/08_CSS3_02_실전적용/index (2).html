@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>08_CSS3_응용파트</title>
+  </head>
+  <body>
+    <h2>자동 슬라이드 이미지 - fadeIn 효과 적용</h2>
+    <div class="fadeImg"></div>
+    <h2>자동 슬라이드 이미지 - 좌우로 이동하는 효과 적용</h2>
+    <div class="slider_1">
+      <div class="slide_cover">
+        <div><h2>1</h2></div>
+        <div><h2>2</h2></div>
+        <div><h2>3</h2></div>
+      </div>
+    </div>
+
+    <!-- 
+    선택자1 + 선택자2: 바로 다음에 오는 형제를 선택할 때 사용
+    선택자1 ~ 선택자2: 다음에 어딘가에 존재하는 형제를 선택할 때 사용 
+    -->
+
+    <h2>click 요소에 따른 색상 변화</h2>
+    <div id="click_test_1">
+      <input type="radio" name="test1" id="click_0" title="0번" checked />
+      <label for="click_0"></label>
+      <input type="radio" name="test1" id="click_1" title="1번" />
+      <label for="click_1"></label>
+      <input type="radio" name="test1" id="click_2" title="2번" />
+      <label for="click_2"></label>
+      <div class="result"></div>
+    </div>
+
+    <h2>네비게이션 슬라이드(좌우)</h2>
+    <div id="pagerSlider">
+      <input type="radio" name="nav_1" id="slide_1" checked />
+      <input type="radio" name="nav_1" id="slide_2" />
+      <input type="radio" name="nav_1" id="slide_3" />
+
+      <div class="pager">
+        <label for="slide_1">1</label>
+        <label for="slide_2">2</label>
+        <label for="slide_3">3</label>
+      </div>
+      <div class="frame">
+        <div class="slide slide_1"><h3>slide_1</h3></div>
+        <div class="slide slide_2"><h3>slide_2</h3></div>
+        <div class="slide slide_3"><h3>slide_3</h3></div>
+      </div>
+    </div>
+
+    <h2>네비게이션 슬라이드(fadeIn)</h2>
+    <div id="pagerFade">
+      <input type="radio" name="nav_2" id="slide_01" checked />
+      <input type="radio" name="nav_2" id="slide_02" />
+      <input type="radio" name="nav_2" id="slide_03" />
+
+      <div class="pager">
+        <label for="slide_01">1</label>
+        <label for="slide_02">2</label>
+        <label for="slide_03">3</label>
+      </div>
+      <div class="frame"></div>
+    </div>
+    <h2>탭버튼과 탭박스</h2>
+    <div id="tab">
+      <input type="radio" name="tab" id="t_1" checked />
+      <input type="radio" name="tab" id="t_2" />
+      <input type="radio" name="tab" id="t_3" />
+
+      <div class="tabBtn">
+        <label for="t_1">Interior-1</label>
+        <label for="t_2">Interior-2</label>
+        <label for="t_3">Interior-3</label>
+        <span class="bar"></span>
+      </div>
+      <div class="tab_cont">
+        <div class="cont cont_1">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+        <div class="cont cont_2">
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+        </div>
+        <div class="cont cont_3">
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

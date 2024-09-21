@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* 전체 선택자 */
+/* *{color: orange;} */
+
+/* 태그 선택자 */
+/* h3{color: #0f0;} */
+
+/* 클래스 선택자 */
+.cl_01{color: #00f}
+.class_selector{background-color: #fb5;}
+.fav_ice{font-weight: bold;}
+.슈팅스타{
+  font-style: italic;
+}
+.a{color: aqua;}
+._a{color: red;}
+
+/* 아이디 선택자 */
+#txt_id{background-color: #aaf;}
+#id_1{background-color: #afa;}
+#1 {background-color: #faa;}
+
+/* 자식 선택자(부모 > 자식) */
+.menu > .biz{background-color: #ffa;}
+.menu > li > ul > .meca > a{color: green;}
+.menu > li > ul > .che > a{color: orange;}
+
+/* 자손 선택자(조상 후손) */
+.menu .product{
+  color: red;
+  background-color: #faa;}
+
+
+
+  /* 인접 선택자(형 + 직계동생) */
+  .cur_list + li + .target_list {background-color: #b99;}
+  /* .cur_list - li{background-color: #bb0;} */
+
+
+
+  /* 내림 형제 선택자(형 ~ 어딘가 존재하는 동생) */
+  .cur_list ~.target_list2{background-color: #bbf;}
+
+
+
+  /* 복수(병렬) 선택자 */
+  .several_selector p, 
+  .several_selector h5 {color: hotpink}
+
+
+
+  /* 가상 공간 선택자(선택자:: before / 선택자:: after) */
+
+  .virtual_space::before{
+    content: "맛있는 ";
+  }
+  .virtual_space::after{
+    content: " 민트초코피자";
+  }
+
+
+/* 마우스 오버 관련 선택자(선택자::hover) */
+  .change_bg{
+    width: 200px;
+    height: 200px;
+    background-color: #faa;
+    /* transition: background-color 1s, 
+    width 1s;
+    height 2s; */
+    transition: 1s;
+  }
+  .change_bg {
+    width: 100px;
+    background-color: #ffa;
+  }
+  .com_menu {
+    background-color: #ffc;
+  }
+  .com_menu > li{
+    background-color: #fb7;
+  }
+  .com_menu > li > a{
+    color: #888;
+    text-decoration: none;
+    background-color: #afc;
+  }
+  .com_menu > li:hover > a{
+    color: #f00;
+  }
+  .com_menu > li > ul > li > a{
+    color: #555;
+  }
+  .com_menu > li > ul > li:hover > a{
+    color: hotpink;
+  }
+
+  /* 링크 관련 가상 행동 선택자 */
+  .a_focus{
+    color: red;
+  }
+  .a_focus:focus { 
+    color: orange;
+  }
+  .inputBx1{}
+  .inputBx1:focus{background-color: #acf;}
+
+  .a_active{color: red;}
+  .a_active:active{color: orange;}
+
+  /* 속성 선택자 */
+  .attribute_selector1 > div{
+    margin-bottom: 4px;
+  }
+  .attribute_selector1 [type] {
+    background-color: #ffc;
+    border: 1px solid #ccc;
+    height: 24px;
+    border-radius: 12px;
+    outline: 1px solid #faa;
+  }
+
+  .attribute_selector1 [type="password"] {
+    color: blue;
+  }
+
+  /* 
+  속성명^="연속된 글자" ==> 지목한 속성명의 값 중에서 연속된 글자로 시작하는 것만 선택
+  속성명$="연속된 글자" ==> (...) 종료되는 것만 선택
+  속성명*="연속된 글자" ==> (...) 포함된 것만 선택 
+  */
+
+  .attribute_selector2 [class*="dessert"]{color: #faa;
+  }
+  .attribute_selector2 [class*="od"]{background-color: #ff7;}
+
+  .attribute_selector2 [class^="die"]{border-bottom: 2px solid red;}
+
+  .attribute_selector2 [class$="d"]{border-left: 4px solid #000;}
+
+  /* 수동 선택자 */
+  .nth_selector li:nth-child(2){
+    background-color: #ffa;
+  }
+
+  .nth_selector li:nth-child(2n){
+    border-left: 8px solid #000; 
+  }
+
+  .nth_selector li:nth-child(2n-1){
+    border-left: 8px solid #f00
+  }
+
+  .nth_selector li:nth-child(even){
+    border-bottom: 2px solid #000;
+  }
+
+  .nth_selector li:nth-child(odd){
+    border-bottom: 2px solid #f00;
+  }
+
+  /* 종속 선택자 */
+  div.contain_selector{
+    background-color: #ccf;
+  }
+  div.contain_selector p.myDevice{
+    color: #fff;
+  }
+  div.contain_selector p[class*="De"]{
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  /* CSS 선택자의 명시도(점수부여법) */
+  div#section div.part .txt_cont {color: red;}
+  div#section .part .txt_cont {color: blue;}
+
+  

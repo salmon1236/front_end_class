@@ -1,0 +1,125 @@
+@charset "ucf-8";
+/* 배경색상(background-color) */
+.half_transparent {
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/university_01.jpg);
+}
+.half_transparent .dark_cover {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255,50,200,.5);
+}
+
+
+
+
+/* 배경이미지(background-image:url (이미지 파일의 경로)) / bgi */
+.bgi_img_01 {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    background-image: url(../img/snoopy.png);
+}
+
+
+
+
+/* 배경의 위치 선언(background-position: 수평위치 수직위치) / bgp */
+.bgi_img_02 {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    background-image: url(../img/snoopy.png);
+    background-position: 50% 50%;
+    background-position: center center;
+    background-position: 50% center;
+    /* 문자와 숫자를 섞어 쓰지 말 것(헷갈림) */
+    background-position: 50% ;
+    /* 하나의 선언만으로도 가로,세로의 위치를 동일 적용 */
+}
+
+
+
+
+/* 배경의 사이즈 조정(background-size: cover / contain / 가로px / 세로px) */
+.bgs_img_03 {
+    width: 400px;
+    height: 300px;
+    background-color: #eee;
+    background-image: url(../img/university_01.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.bgs_img_04 {
+    width: 200px;
+    height: 200px;
+    background-color: #ffa;
+    background-image: url(../img/jan.png);
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+
+
+
+/* 배경의 반복(패턴) 설정: background-repeat */
+.bgr_img_05 {
+    width: 400px;
+    height: 400px;
+    background-color: #aff;
+    background-image: url(../img/snoopy.png);
+    background-position: 50% 50%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    /* no-repeat:반복하지 않음 */
+    background-repeat: repeat-x;
+    /* repeat-x: x축 반복 / repeat-y: y축 반복 */
+    background-repeat: repeat;
+/* repeat: x,y축 전체 반복 */
+}
+
+
+
+
+
+/* parallax 효과(background-attach: scroll(defult) / fixed) */
+
+
+.bgr_img_06 {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 300px;
+    background-image: url(../img/wallpaper.png);
+    background-position: 50% 50%;
+    background-attachment: fixed;
+}
+
+
+
+/* background: 배경색상 배경이미지 배경반복 배경붙이기 배경위치/배경사이즈 */
+.total_bg {
+    width: 100px;
+    height: 300px;
+    background: #000 url(../img/university_02.jpg) no-repeat scroll 50% 50%/ 50% auto;
+}
+
+
+.parent_bg {
+    width: 300px;
+    height: 300px;
+    background-image: url(../img/jan.png);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.child_bg {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0,0,0,.5);
+}
+
+.child_bg {
+    color: #fff;
+    line-height: 300px;
+    text-align: center;
+}

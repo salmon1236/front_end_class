@@ -1,0 +1,885 @@
+@charset "utf-8";
+/* 공통 스타일 */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+header,
+section,
+article,
+nav,
+aside,
+footer {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+
+#ex_01_header_float {
+  width: 100%;
+  height: 120px;
+  background-color: #eee;
+  padding: 30px 40px;
+}
+#ex_01_header_float .wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc;
+}
+#ex_01_header_float .wrap:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#ex_01_header_float .wrap .logo {
+  float: left;
+}
+#ex_01_header_float .wrap .menu {
+  float: right;
+}
+#ex_01_header_float .wrap .menu ul {
+}
+#ex_01_header_float .wrap .menu ul li {
+  float: left;
+  margin: 0 25px;
+}
+#ex_01_header_float .wrap .menu ul li:last-child {
+  margin-right: 0;
+}
+#ex_01_header_float .wrap .menu ul li a {
+  line-height: 60px;
+  color: #777;
+}
+#ex_01_header_float .wrap .menu ul li:hover a {
+  color: #000;
+}
+
+#ex_01_header_inlineBlock {
+  width: 100%;
+  height: 120px;
+  background-color: #eee;
+  padding: 30px 40px;
+}
+#ex_01_header_inlineBlock .wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc;
+  position: relative;
+}
+#ex_01_header_inlineBlock .wrap .logo {
+  position: absolute;
+}
+#ex_01_header_inlineBlock .wrap .menu {
+  text-align: right;
+  background-color: #aaf;
+}
+#ex_01_header_inlineBlock .wrap .menu ul {
+  font-size: 0;
+}
+#ex_01_header_inlineBlock .wrap .menu ul li {
+  display: inline-block;
+  margin: 0 25px;
+  font-size: 16px;
+  background-color: #faf;
+}
+#ex_01_header_inlineBlock .wrap .menu ul li:last-child {
+  margin-right: 0;
+}
+#ex_01_header_inlineBlock .wrap .menu ul li a {
+  line-height: 60px;
+  background-color: #aff;
+  color: #777;
+}
+#ex_01_header_inlineBlock .wrap .menu ul li:hover a {
+  color: #000;
+}
+
+#ex_01_header_flex {
+  width: 100%;
+  height: 120px;
+  background-color: #eee;
+  padding: 30px 40px;
+}
+#ex_01_header_flex .wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc;
+  display: flex;
+  justify-content: space-between;
+}
+#ex_01_header_flex .wrap .logo {
+}
+#ex_01_header_flex .wrap .menu {
+}
+
+#ex_01_header_flex .wrap .menu ul {
+  display: flex;
+}
+#ex_01_header_flex .wrap .menu ul li {
+  margin: 0 25px;
+}
+#ex_01_header_flex .wrap .menu ul li:last-child {
+  margin-right: 0;
+}
+#ex_01_header_flex .wrap .menu ul li a {
+  line-height: 60px;
+  color: #777;
+}
+#ex_01_header_flex .wrap .menu ul li:hover a {
+  color: #000;
+}
+
+#ex_02_header_float {
+  width: 100%;
+  height: 120px;
+  background-color: #eee;
+  padding: 30px 40px;
+}
+#ex_02_header_float .wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc;
+}
+#ex_02_header_float .wrap .logo {
+  float: left;
+}
+
+#ex_02_header_float .wrap .menu {
+  float: right;
+}
+#ex_02_header_float .wrap .menu ul {
+  float: left;
+  margin-right: 60px;
+}
+#ex_02_header_float .wrap .menu ul li {
+  float: left;
+  margin: 0 25px;
+}
+#ex_02_header_float .wrap .menu ul li:last-child {
+  margin-right: 0;
+}
+
+#ex_02_header_float .wrap .menu ul li a {
+  line-height: 60px;
+}
+
+#ex_02_header_float .wrap .menu .my {
+  float: right;
+  padding: 10px 0;
+}
+#ex_02_header_float .wrap .menu .my button {
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #08f;
+  color: #fff;
+  border-radius: 20px;
+}
+
+#ex_02_header_flex {
+  width: 100%;
+  height: 120px;
+  background-color: #eee;
+  padding: 30px 40px;
+}
+#ex_02_header_flex .wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc;
+  display: flex;
+  justify-content: space-between;
+}
+#ex_02_header_flex .wrap .logo {
+}
+#ex_02_header_flex .wrap .menu {
+  display: flex;
+}
+#ex_02_header_flex .wrap .menu ul {
+  display: flex;
+  margin-right: 60px;
+}
+#ex_02_header_flex .wrap .menu ul li {
+  margin: 0 25px;
+}
+#ex_02_header_flex .wrap .menu ul li:last-child {
+  margin-right: 0;
+}
+#ex_02_header_flex .wrap .menu ul li a {
+  line-height: 60px;
+}
+#ex_02_header_flex .wrap .menu .my {
+  padding: 10px 0;
+}
+#ex_02_header_flex .wrap .menu .my button {
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #08f;
+  color: #fff;
+  border-radius: 20px;
+}
+
+#ex_03_inlineBlock {
+  width: 100%;
+  height: 120px;
+  background-color: #eee;
+  padding: 30px 40px;
+}
+#ex_03_inlineBlock .wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc;
+  position: relative;
+}
+#ex_03_inlineBlock .wrap .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#ex_03_inlineBlock .wrap .menu {
+  text-align: center;
+}
+#ex_03_inlineBlock .wrap .menu ul {
+  font-size: 0;
+}
+/* 마우스오버시 하단에 바를 구성하기#1 */
+/* #ex_03_inlineBlock .wrap .menu ul li {
+  display: inline-block;
+  margin: 0 25px;
+  font-size: 16px;
+}
+#ex_03_inlineBlock .wrap .menu ul li a {
+  display: block;
+  line-height: 1;
+  padding: 22px 0 18px;
+  color: #777;
+  border-bottom: 4px solid transparent;
+}
+#ex_03_inlineBlock .wrap .menu ul li:hover a {
+  color: #08f;
+  border-bottom: 4px solid #08f;
+} */
+/* 마우스오버시 하단에 바를 구성하기#2 */
+/* #ex_03_inlineBlock .wrap .menu ul li {
+  display: inline-block;
+  margin: 0 25px;
+  font-size: 16px;
+}
+#ex_03_inlineBlock .wrap .menu ul li a {
+  display: block;
+  line-height: 60px;
+  color: #777;
+  border-bottom: 4px solid transparent;
+  position: relative;
+}
+#ex_03_inlineBlock .wrap .menu ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: transparent;
+  left: 0;
+  bottom: 0;
+}
+#ex_03_inlineBlock .wrap .menu ul li:hover a:after {
+  width: 100%;
+  background-color: #08f;
+  transition: width 0.5s;
+}
+
+#ex_03_inlineBlock .wrap .menu ul li:hover a {
+  color: #08f;
+} */
+
+/* 마우스오버시 하단에 바를 구성하기#3 - 하단 바가 센터로부터 확장 */
+#ex_03_inlineBlock .wrap .menu ul li {
+  display: inline-block;
+  margin: 0 25px;
+  font-size: 16px;
+}
+#ex_03_inlineBlock .wrap .menu ul li a {
+  display: block;
+  line-height: 60px;
+  color: #777;
+  position: relative;
+}
+#ex_03_inlineBlock .wrap .menu ul li a:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: transparent;
+  right: 50%;
+  bottom: 0;
+}
+
+#ex_03_inlineBlock .wrap .menu ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: transparent;
+  left: 50%;
+  bottom: 0;
+}
+#ex_03_inlineBlock .wrap .menu ul li:hover a:before {
+  width: 50%;
+  background-color: #08f;
+  transition: width 0.5s;
+}
+#ex_03_inlineBlock .wrap .menu ul li:hover a:after {
+  width: 50%;
+  background-color: #08f;
+  transition: width 0.5s;
+}
+
+#ex_03_inlineBlock .wrap .menu ul li:hover a {
+  color: #08f;
+}
+
+#ex_03_inlineBlock .wrap .my {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 0;
+}
+#ex_03_inlineBlock .wrap .my button {
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #08f;
+  color: #fff;
+  border-radius: 20px;
+}
+
+#ex_03_flex {
+  width: 100%;
+  height: 120px;
+  background-color: #eee;
+  padding: 30px 40px;
+}
+#ex_03_flex .wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#ex_03_flex .wrap .logo {
+}
+#ex_03_flex .wrap .menu {
+}
+#ex_03_flex .wrap .menu ul {
+  display: flex;
+}
+#ex_03_flex .wrap .menu ul li {
+  margin: 0 25px;
+}
+#ex_03_flex .wrap .menu ul li a {
+  display: block;
+  line-height: 60px;
+  color: #777;
+  position: relative;
+}
+
+#ex_03_flex .wrap .menu ul li a:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: transparent;
+  right: 50%;
+  bottom: 0;
+}
+
+#ex_03_flex .wrap .menu ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: transparent;
+  left: 50%;
+  bottom: 0;
+}
+#ex_03_flex .wrap .menu ul li:hover a:before {
+  width: 50%;
+  background-color: #08f;
+  transition: width 0.5s;
+}
+#ex_03_flex .wrap .menu ul li:hover a:after {
+  width: 50%;
+  background-color: #08f;
+  transition: width 0.5s;
+}
+
+#ex_03_flex .wrap .menu ul li:hover a {
+  color: #08f;
+}
+
+#ex_03_flex .wrap .my {
+  width: 276px;
+  text-align: right;
+}
+#ex_03_flex .wrap .my button {
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #08f;
+  color: #fff;
+  border-radius: 20px;
+}
+
+#ex_05_flex {
+  width: 100%;
+  background-color: #eee;
+}
+#ex_05_flex .head_top {
+  width: 100%;
+  height: 16px;
+  background-color: #08f;
+  padding: 0 40px;
+}
+#ex_05_flex .head_top .wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #05a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#ex_05_flex .head_top .wrap .info_left {
+}
+#ex_05_flex .head_top .wrap .info_left p {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+}
+#ex_05_flex .head_top .wrap .info_right {
+}
+#ex_05_flex .head_top .wrap .info_right ul {
+  display: flex;
+}
+#ex_05_flex .head_top .wrap .info_right ul li {
+  margin-left: 16px;
+}
+#ex_05_flex .head_top .wrap .info_right ul li a {
+}
+#ex_05_flex .head_top .wrap .info_right ul li a img {
+  height: 14px;
+}
+
+#ex_05_flex .head_main {
+  width: 100%;
+  height: 120px;
+  padding: 30px 40px;
+}
+#ex_05_flex .head_main .wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#ex_05_flex .head_main .wrap .logo {
+}
+#ex_05_flex .head_main .wrap .menu {
+}
+
+#ex_05_flex .wrap .menu ul {
+  display: flex;
+}
+#ex_05_flex .wrap .menu ul li {
+  margin: 0 25px;
+}
+#ex_05_flex .wrap .menu ul li a {
+  display: block;
+  line-height: 60px;
+  color: #777;
+  position: relative;
+}
+
+#ex_05_flex .wrap .menu ul li a:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: transparent;
+  right: 50%;
+  bottom: 0;
+}
+
+#ex_05_flex .wrap .menu ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: transparent;
+  left: 50%;
+  bottom: 0;
+}
+#ex_05_flex .wrap .menu ul li:hover a:before {
+  width: 50%;
+  background-color: #08f;
+  transition: width 0.5s;
+}
+#ex_05_flex .wrap .menu ul li:hover a:after {
+  width: 50%;
+  background-color: #08f;
+  transition: width 0.5s;
+}
+
+#ex_05_flex .wrap .menu ul li:hover a {
+  color: #08f;
+}
+
+#ex_05_flex .wrap .my {
+  width: 276px;
+  text-align: right;
+}
+#ex_05_flex .wrap .my button {
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #08f;
+  color: #fff;
+  border-radius: 20px;
+}
+#ex_05_flex .head_bottom {
+  width: 100%;
+  height: 70px;
+  padding: 0 40px;
+}
+#ex_05_flex .head_bottom .wrap {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #ccc;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+#ex_05_flex .head_bottom .wrap .search_box {
+  width: 600px;
+  height: 40px;
+  background-color: #ff7;
+  border-radius: 20px;
+  position: relative;
+}
+#ex_05_flex .head_bottom .wrap .search_box input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  padding-right: 60px;
+}
+#ex_05_flex .head_bottom .wrap .search_box button {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+#ex_05_flex .head_bottom .wrap .search_box button img {
+  width: 20px;
+}
+
+#cont {
+  width: 100%;
+  height: 240px;
+  background-color: #faf;
+}
+
+/* ex_06. 2단 메뉴 구성 - 개별 메뉴 보여주기 */
+#ex_06 {
+  width: 100%;
+  height: 60px;
+  background-color: #eee;
+}
+#ex_06 .wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #ffd; */
+}
+#ex_06 .wrap .logo {
+  padding: 10px 0;
+}
+#ex_06 .wrap .logo a {
+}
+#ex_06 .wrap .logo a img {
+  height: 40px;
+}
+
+#ex_06 .wrap .menu {
+}
+#ex_06 .wrap .menu > ul {
+  display: flex;
+  text-align: center;
+}
+#ex_06 .wrap .menu > ul > li {
+  margin: 0 15px;
+}
+#ex_06 .wrap .menu > ul > li > a {
+  display: block;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #999;
+}
+#ex_06 .wrap .menu > ul > li:hover > a {
+  color: #555;
+}
+
+#ex_06 .wrap .menu > ul > li > ul {
+  background-color: #eee;
+  display: none;
+}
+#ex_06 .wrap .menu > ul > li:hover > ul {
+  display: block;
+}
+#ex_06 .wrap .menu > ul > li > ul > li {
+}
+#ex_06 .wrap .menu > ul > li > ul > li > a {
+  display: block;
+  line-height: 30px;
+  color: #999;
+}
+#ex_06 .wrap .menu > ul > li > ul > li:hover > a {
+  color: #555;
+}
+
+/* ex_07. 2단 메뉴 구성 - 전체 메뉴 보여주기 */
+#ex_07 {
+  width: 100%;
+  height: 60px;
+  background-color: #eee;
+}
+#ex_07 .wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #ffd; */
+}
+#ex_07 .wrap .logo {
+  padding: 10px 0;
+}
+#ex_07 .wrap .logo a {
+}
+#ex_07 .wrap .logo a img {
+  height: 40px;
+}
+
+#ex_07 .wrap .menu {
+}
+#ex_07 .wrap .menu > ul {
+  display: flex;
+  text-align: center;
+}
+#ex_07 .wrap .menu > ul > li {
+}
+#ex_07 .wrap .menu > ul > li > a {
+  display: block;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #999;
+  padding: 0 15px;
+}
+#ex_07 .wrap .menu > ul > li:hover > a {
+  color: #555;
+}
+
+#ex_07 .wrap .menu > ul > li > ul {
+  background-color: #eee;
+  height: 90px;
+  display: none;
+}
+#ex_07 .wrap .menu > ul:hover > li > ul {
+  display: block;
+}
+#ex_07 .wrap .menu > ul > li > ul > li {
+}
+#ex_07 .wrap .menu > ul > li > ul > li > a {
+  display: block;
+  line-height: 30px;
+  color: #999;
+}
+#ex_07 .wrap .menu > ul > li > ul > li:hover > a {
+  color: #555;
+}
+
+/* ex_08. 2단 메뉴 구성 - 부분 펼친 전체 메뉴 보여주기 */
+#ex_08 {
+  width: 100%;
+  height: 60px;
+  background-color: #eee;
+}
+#ex_08 .wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #ffd; */
+  position: relative;
+}
+#ex_08 .wrap .logo {
+  padding: 10px 0;
+}
+#ex_08 .wrap .logo a {
+}
+#ex_08 .wrap .logo a img {
+  height: 40px;
+}
+#ex_08 .wrap .menu {
+}
+#ex_08 .wrap .menu > ul {
+  display: flex;
+  text-align: center;
+}
+#ex_08 .wrap .menu > ul > li {
+  width: 160px;
+}
+#ex_08 .wrap .menu > ul > li > a {
+  display: block;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #999;
+  padding: 0 15px;
+}
+
+#ex_08 .wrap .menu > .bottom_space {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #efe;
+  display: flex;
+  justify-content: flex-end;
+  display: none;
+}
+#ex_08 .wrap .menu:hover > .bottom_space {
+  display: flex;
+}
+
+#ex_08 .wrap .menu > .bottom_space > .right_part {
+  display: flex;
+}
+#ex_08 .wrap .menu > .bottom_space > .right_part > ul {
+  width: 160px;
+  text-align: center;
+}
+#ex_08 .wrap .menu > .bottom_space > .right_part > ul > li {
+}
+#ex_08 .wrap .menu > .bottom_space > .right_part > ul > li > a {
+  display: block;
+  line-height: 30px;
+  color: #999;
+}
+
+/* ex_09. 2단 메뉴 구성 - 전체 펼친 전체 메뉴 보여주기 */
+#ex_09 {
+  width: 100%;
+  height: 60px;
+  background-color: #eee;
+  position: relative;
+}
+#ex_09 .wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #ffd; */
+}
+#ex_09 .wrap .logo {
+  padding: 10px 0;
+}
+#ex_09 .wrap .logo a {
+}
+#ex_09 .wrap .logo a img {
+  height: 40px;
+}
+#ex_09 .wrap .menu {
+}
+#ex_09 .wrap .menu > ul {
+  display: flex;
+  text-align: center;
+}
+#ex_09 .wrap .menu > ul > li {
+  width: 160px;
+}
+#ex_09 .wrap .menu > ul > li > a {
+  display: block;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #999;
+  padding: 0 15px;
+}
+
+#ex_09 .wrap .menu > .bottom_space {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #efe;
+
+  display: none;
+}
+
+#ex_09 .wrap .menu:hover > .bottom_space {
+  display: flex;
+}
+
+#ex_09 .wrap .menu > .bottom_space > .sub_wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#ex_09 .wrap .menu > .bottom_space > .sub_wrap > .right_part {
+  display: flex;
+}
+#ex_09 .wrap .menu > .bottom_space > .sub_wrap > .right_part > ul {
+  width: 160px;
+  text-align: center;
+}
+#ex_09 .wrap .menu > .bottom_space > .sub_wrap > .right_part > ul > li {
+}
+#ex_09 .wrap .menu > .bottom_space > .sub_wrap > .right_part > ul > li > a {
+  display: block;
+  line-height: 30px;
+  color: #999;
+}

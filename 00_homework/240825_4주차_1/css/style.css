@@ -1,0 +1,681 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 20;
+  padding: 10;
+}
+header,
+section,
+article,
+nav,
+aside,
+footer {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* 과제1 */
+.red:hover {
+  color: red;
+  font-weight: bold;
+}
+.yellow:hover {
+  color: yellow;
+  font-weight: bold;
+}
+.blue:hover {
+  color: blue;
+  font-weight: bold;
+}
+.green:hover {
+  color: green;
+  font-weight: bold;
+}
+
+/* 과제2 */
+#fav_03 {
+  color: orange;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 과제3 */
+#ex_03 > .colTxt_02 > a {
+  background-color: #08c;
+  color: white;
+}
+
+/* 과제4 */
+#ex_04 > li > a > span {
+  font-style: italic;
+  color: #f00;
+}
+
+/* 과제5 */
+#ex_05 > div > span > span {
+  background-color: #f66;
+  color: #f00;
+  font-weight: bold;
+}
+
+/* 과제6 */
+#ex_06 > ul > li:nth-child(3) {
+  background-color: #0a3;
+  color: #fff;
+  display: inline;
+}
+
+/* 과제7 */
+
+#ex_07 {
+  display: inline-block;
+}
+
+#ex_07 > p:nth-child(5) {
+  background-color: #fa3;
+  font-size: 30px;
+}
+
+/* 과제8 */
+#ex_08 a {
+  color: #777;
+}
+#ex_08 .product_intro {
+  color: #2b3;
+}
+#ex_08 .vision_intro {
+  color: #f85;
+}
+#ex_08 .matarial_industry {
+  color: blue;
+  font-size: 25px;
+}
+
+/* 과제9 */
+#ex_09 {
+  text-align: center;
+  line-height: 100px;
+}
+#ex_09 .box1 {
+  width: 100px;
+  height: 100px;
+  background-color: #aaa;
+}
+#ex_09 .box2 {
+  width: 100px;
+  height: 100px;
+  background-color: #faf;
+}
+#ex_09 .box3 {
+  width: 100px;
+  height: 100px;
+  background-color: #aaa;
+}
+#ex_09 .box4 {
+  width: 100px;
+  height: 100px;
+  background-color: #faf;
+}
+
+/* 과제10 */
+#ex_10 {
+  font-size: 26px;
+  color: #27e;
+  text-align: center;
+}
+#ex_10 h4 {
+  font-family: "Nanum Gothic";
+}
+#ex_10 span {
+  font-family: "Nanum Pen Script";
+  font-size: 28px;
+}
+#ex_10 img {
+  width: 120px;
+}
+
+/* 과제11 */
+#ex_11 {
+  font-family: "poppins";
+  width: 1400px;
+  text-align: center;
+  margin: 0 auto;
+}
+.show_img {
+  width: 100%;
+  height: 600px;
+  background-image: url(../img/img_11.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+#ex_11 h5 {
+  font-size: 13px;
+  color: rgba(166, 5, 5, 1);
+  font-weight: 300;
+}
+#ex_11 h2 {
+  font-size: 32px;
+  color: #333;
+  font-weight: 500;
+  padding: 40px 0 30px 0;
+}
+#ex_11 p {
+  font-size: 17px;
+  color: #555;
+  font-weight: 200;
+}
+
+/* 과제12 */
+#ex_12 {
+  background-color: #a11;
+  padding: 20px;
+}
+#ex_12 .pic_1_ex_12 {
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  background-position: 50% 50%;
+  /* background-color: #27e; */
+  background-image: url(../img/img_12_01.jpeg);
+  background-size: cover;
+}
+#ex_12 .pic_2_ex_12 {
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  background-position: 50% 50%;
+  /* background-color: #26a; */
+  background-image: url(../img/img_12_02.jpeg);
+  background-size: cover;
+}
+
+/* 과제13 */
+#ex_13 {
+  height: 400px;
+  padding: 20px;
+  border: 1px solid #a11;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#ex_13 .pic_13 {
+  width: 300px;
+  height: 400px;
+  float: left;
+}
+#ex_13 .pic_13 {
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+}
+.pic_13:last-child {
+  margin-right: 0;
+}
+.pic_13 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 과제14 */
+#ex_14 {
+  width: 1200px;
+  height: 400px;
+  padding: 40px 0px;
+  background-color: #fdd;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.ex_14 {
+  width: 380px;
+  height: 400px;
+  background-size: cover;
+  margin: 0 10px;
+  background-position: 50% 25%;
+  float: left;
+}
+
+.pic_1 {
+  background-image: url(../img/w_01.jpg);
+}
+.pic_2 {
+  background-image: url(../img/w_02.jpg);
+}
+.pic_3 {
+  background-image: url(../img/w_03.jpg);
+}
+
+/* 과제15 */
+#ex_15 {
+  width: 1200px;
+  background-color: #fdd;
+  margin: 0 auto;
+  padding: 40px 0;
+  overflow: hidden;
+}
+.box_ex_15 {
+  width: calc(25% - 20px);
+  text-align: center;
+  float: left;
+  margin: 0 10px;
+}
+.img_15 {
+  width: 100%;
+  height: 400px;
+  background-position: 50% 25%;
+  background-size: cover;
+}
+.loewe {
+  background-image: url(../img/f_01.jpeg);
+}
+.dior {
+  background-image: url(../img/f_02.jpeg);
+}
+.ahluwalia {
+  background-image: url(../img/f_03.jpeg);
+}
+.msgm {
+  background-image: url(../img/f_04.jpeg);
+}
+h4 {
+  font-size: 22px;
+  line-height: 40px;
+  font-family: "poppin";
+  margin: 0;
+}
+
+/* 과제16 */
+#ex_16 {
+  width: 800px;
+  height: 400px;
+  padding: 20px;
+  background-color: #caa;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  gap: 100px;
+  box-sizing: border-box;
+}
+
+.content_img_16 {
+  width: 300px;
+  height: 400px;
+  background-image: url(../img/img_12_01.jpeg);
+  background-size: contain;
+  background-position: center;
+  box-sizing: border-box;
+}
+.content_txt_16 {
+  float: right;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+}
+#ex_16 .content_txt_16 h4 {
+  font-size: 32px;
+  font-family: "Great Vibes";
+  color: white;
+  padding: 20px 0;
+  margin: 0 0 10px 0;
+}
+#ex_16 .content_txt_16 p {
+  font-size: 17px;
+  font-family: "poppin";
+  color: white;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* 과제17 */
+#ex_17 {
+  width: 800px;
+  height: auto;
+  padding: 20px;
+  background-color: #caa;
+  margin: 0 auto;
+  position: relative;
+}
+#ex_17::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.content_img_17 {
+  width: 300px;
+  height: 400px;
+  float: left;
+  background-image: url(../img/img_17_01.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.content_txt_17 {
+  width: 400px;
+  height: 400px;
+  margin-left: 60px;
+  float: right;
+  padding: 20px 20px 20px 0;
+}
+.content_txt_17 h4 {
+  font-size: 32px;
+  font-family: "Great Vibes";
+  color: white;
+  padding: 20px 0;
+}
+.content_txt_17 p {
+  font-size: 17px;
+  font-family: "poppin";
+  color: white;
+  padding: 20px 0;
+  font-weight: 300;
+}
+
+/* 과제18 */
+
+#ex_18 {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #caa;
+  box-sizing: border-box;
+}
+
+#ex_18 .top,
+#ex_18 .bottom {
+  width: 100%;
+  display: flex;
+  margin-bottom: 100px;
+  align-items: flex-start;
+  justify-content: center;
+}
+#ex_18 .bottom {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.content_top_img_18,
+.content_bottom_img_18 {
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 100px;
+}
+
+.content_top_img_18 {
+  background-image: url(../img/f_01.jpeg);
+}
+.content_bottom_img_18 {
+  background-image: url(../img/f_02.jpeg);
+}
+
+.content_top_txt_18,
+.content_bottom_txt_18 {
+  width: 400px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.content_top_txt_18 h4,
+.content_bottom_txt_18 h4 {
+  font-size: 32px;
+  font-family: "Great Vibes";
+  color: white;
+  padding: 20px 0;
+}
+.content_top_txt_18 p,
+.content_bottom_txt_18 p {
+  font-size: 17px;
+  font-family: "poppins";
+  color: white;
+  font-weight: 300;
+  margin: 0;
+}
+.top::after,
+.bottom::after {
+  content: "";
+  display: block;
+  /* clear: both; */
+}
+
+/* 과제19 */
+#ex_19 {
+  font-family: "Noto Sans KR";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  margin: 0;
+  padding: 30px 0;
+}
+.wrap_Twosome {
+  width: 1000px;
+  height: auto;
+  color: #fff;
+  /* padding: 50px;  */
+  box-sizing: border-box;
+}
+.title_Twosome {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d50307;
+  padding-bottom: 20px;
+}
+.cont_Twosome {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cont_title_Twosome {
+  font-size: 40px;
+  font-weight: normal;
+  padding-bottom: 30px;
+}
+
+.cont_txt_part_Twosome {
+  max-width: 60%;
+  margin-right: 20px;
+}
+.cont_txt_part_Twosome h4 {
+  font-size: 24px;
+  padding-bottom: 20px;
+  color: #d50037;
+  font-weight: 300;
+}
+.cont_txt_part_Twosome p {
+  font-size: 18px;
+  padding-bottom: 10px;
+  color: white;
+  font-weight: 100;
+}
+
+.img_part_Twosome {
+  flex: 1;
+}
+
+.img_part_Twosome img {
+  max-width: 100%;
+  height: auto;
+  padding-left: 50px;
+}
+
+/* 과제20 */
+#ex_20 {
+  width: auto;
+  height: auto;
+  padding: 30px 0;
+  background-color: #eee;
+  font-family: "Noto Sans KR";
+}
+#ex_20 .wrap {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+#ex_20 .wrap .title {
+  /* flex-direction: column; */
+  font-size: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d50037;
+}
+#ex_20 .wrap .cont {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+#ex_20 .wrap .cont .box {
+  flex: 1;
+  margin: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#ex_20 .wrap .cont .box .cont_img {
+  height: 320px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  position: relative;
+}
+#ex_20 .wrap .cont .box .cont_img span {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  top: 10px;
+  left: -5px;
+  padding: 5px 10px;
+}
+#ex_20 .wrap .cont .box .cont_txt {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+#ex_20 .wrap .cont .box .cont_txt h3 {
+  font-size: 19px;
+  padding-bottom: 10px;
+  color: #333;
+}
+#ex_20 .wrap .cont .box .cont_txt .tit_en {
+  font-size: 13px;
+  padding-bottom: 20px;
+  color: #999;
+}
+#ex_20 .wrap .cont .box .cont_txt p {
+  font-size: 195x;
+  font-weight: 300;
+  color: #555;
+}
+#ex_20 .wrap .cont .box .cont_txt .add_comment {
+  font-size: 13px;
+  font-weight: 100;
+  color: #999;
+}
+
+#ex_20 .wrap .cont .box:nth-child(1) .cont_img {
+  background-image: url(../img/img_t_menu01.png);
+}
+#ex_20 .wrap .cont .box:nth-child(2) .cont_img {
+  background-image: url(../img/img_t_menu02.png);
+}
+#ex_20 .wrap .cont .box:nth-child(3) .cont_img {
+  background-image: url(../img/img_t_menu03.png);
+}
+#ex_20 .wrap .cont .box:nth-child(4) .cont_img {
+  background-image: url(../img/img_t_menu04.png);
+}
+
+/* 과제21 */
+#ex_21 {
+  width: auto;
+  height: auto;
+  padding: 40px 0;
+}
+#ex_21 .wrap {
+  width: 1400px;
+  height: auto;
+  margin: 0 auto;
+}
+#ex_21 .wrap .cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#ex_21 .wrap .cont .img_part {
+  width: calc(50% - 40px);
+  height: 700px;
+  
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin: 0 40px;
+}
+#ex_21 .wrap .cont .img_part .full_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#ex_21 .wrap .cont .img_part .icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/Bang-Olufsen.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#ex_21 .wrap .cont .txt_part {
+  color: #222;
+  width: calc(50% - 40px);
+  display: inline-block;
+  vam
+}
+#ex_21 .wrap .cont .txt_part h5 {
+  font-size: 22px;
+  padding-bottom: 20px;
+  font-weight: 100;
+}
+#ex_21 .wrap .cont .txt_part h3 {
+  font-size: 24px;
+  font-weight: 300;
+}
+#ex_21 .wrap .cont .txt_part p {
+  font-size: 16px;
+  font-weight: 100;
+}
+#ex_21 .wrap .cont .txt_part .mini_line {
+  width: 60px;
+  height: 2px;
+  background-color: rgb(228, 37, 37);
+  margin: 40px 0;
+}

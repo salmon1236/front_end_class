@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_HTML_</title>
+  </head>
+  <body>
+    <div id="top">블록과 인라인</div>
+
+    <h3>요소 성질</h3>
+    <h4>
+      블록 성질 : h1~h6(headline tag - 타이틀 파트), p(paragraph), div(divide -
+      공간을 형성, 그룹핑 작업)
+    </h4>
+    <p>블록 성질 -> 레고블록(상하로 쌓인다 -> 세로방향 정렬시)</p>
+
+    <h4>
+      인라인 성질 : a(anchor - 링크를 걸어줄때 사용 / href), img(image -
+      이미지를 넣을 때 사용) / src(source), alt(alterative - 웹 접근성 :
+      시각장애인을 위한 텍스트 설명. 150자까지만 허용) span(인라인 성질을 갖고
+      있는 그룹핑이 가능)
+
+      <p>인라인 성질 -> 인라인 스케이트 바퀴</p>
+    </h4>
+
+    <div>
+      <!-- 타이틀(headline) 태그(h1 ~ h6) -->
+      <h3 style="background-color: aqua">타이틀(headline) 태그(h1 ~ h6)</h3>
+      <hr />
+      <h1>타이틀 1 - 폰트크기 32px(2em)</h1>
+      <h2>타이틀 2 - 폰트크기 24px(1.5em)</h2>
+      <h3>타이틀 3 - 폰트크기 18.72px(1.17em)</h3>
+      <h4>타이틀 4 - 폰트크기 16px(1em)(기본값)</h4>
+      <h5>타이틀 5 - 폰트크기 13.28px(0.83em)(잘안씀)</h5>
+      <h6>타이틀 6 - 폰트크기 10.72px(0.67em)(잘안씀)</h6>
+      <!-- <H7>타이틀 7</H7> -->
+      
+    </div>
+
+    <div>
+      <!-- 문단(paragraph) -->
+      <h3 style="background-color: aqua">문단(paragraph)</h3>
+      <p>문단 내용 - 16px</p>
+      <p>문단<br />내리기</p>
+      <p style="margin-bottom: 0">손흥민</p>
+      <p style="margin-top: 5">득점왕 수상</p>
+    </div>
+    
+    <div>
+      <!-- 링크태그(link): a(anchor) -->
+      <h3 style="background-color: aqua">링크태그(link): a(anchor)</h3>
+      <p>href 속성 : (Hypertext Referrance) 내부에 해당하는 문서를 참조한다.</p>
+      <!-- 절대경로 : http 또는 https 로 시작되는 주소를 참조 -->
+      <a href="https://www.naver.com/"> 네이버 바로가기</a>
+      <!-- 상대경로 : 현재 문서파일을 기준으로 페이지 이동 시 사용-->
+      <a href="./sub.html">서브페이지로 이동</a>
+      
+      <p>a 태그 내부에 href에서 작성되는 대표적인 속성값들</p>
+      <a href="tel: 01012345678">중국집으로 전화걸기</a>
+      <a href="mailto: custom@naver.com">고객센터 문의하기</a>
+      <a href="sms: 01012345678">000에게 문자 발송하기</a>
+      <a href="#top">상단으로 이동</a>
+      <a href="javascript: alert('안돼 돌아가')">브라우저 경고창 띄우기</a>
+      
+      <p>a 태그 내부에 선언 가능한 그 밖의 속성</p>
+      <a href="https://www.naver.com/" target="_blank">네이버 새 탭에서 열기</a>
+      
+    </div>
+    
+    <div>
+      <h3>이미지 태그: img 태그는 src, alt 속성은 필수</h3>
+      <a href="https://www.airbnb.com/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494647.png" 
+        alt="airbnb"
+        style="width: 100px;" 
+        />
+      </a> 
+      <img src="./img/kakao1.png" alt="카카오 이미지" style="width: 100px;" />
+      <img src="./img/kakao2.jpg" alt="카카오 이미지" style="width: 100px;" />
+      <img src="./img/kakao3.gif" alt="카카오 이미지" style="width: 100px;" />
+      <img src="./img/facebook.svg" alt="페이스북 아이콘 이미지" style="width: 100px;" />
+      
+    </div>
+    
+    <div>
+        <!-- 그룹이 가능한 태그: div, span -->
+        <h3 style="background-color: aqua">그룹이 가능한 태그: div, span</h3>
+        <div style="height: 100px; background-color: #eee;">header 영역</div>
+        <div style="height: 200px;background-color: #ffa;">banner 영역</div>
+        <div style="height: 400px;background: faa;">content 영역</div>
+        <div style="height: 80px;background-color: #000; color: #fff;">footer 영역</div>
+        <hr />
+      </div>
+        <header id="content" style="height: 100px; background-color: #eee;">header 영역</header>
+        <section id="banner" style="height: 200px;background-color: #ffa;">banner 영역</section>
+        <section style="height: 400px;background: faa;">content 영역</section>
+        <footer style="height: 80px;background-color: #000; color: #fff;">footer 영역</footer>
+        <hr />
+        <span style="color: red;">
+          <span style="color: green;">&copy;</span>samsung.co.kr
+        </span>
+
+        <span>
+          <span style="color: blue; font-size: 32px;">5,000원</span>
+        </span>
+    </div>
+    <h4>구조 작성간 주의사항</h4>
+    <i>블록성질 내부에 블록성질 가능(단 말단 태그 내부에 말단 태그를 넣지 말 것)</i><br/>
+    <i>블록성질 내부에 인라인 성질을 포함하는 것 가능</i><br/>
+    <i>인라인 성질 내부에 인라인 성질을 포함하는 것 가능</i><br/>
+    <i>인라인성질 내부에 블록 성질을 포함시키는것은 피해야 함</i><br/>
+
+    
+    <h5>
+      블록성질1 
+      <p>블록성질2</p>
+    </h5>
+
+
+    <p>
+      블록성질3 
+      <h5>블록성질4</h5>
+    </p>
+    
+    <p style="text-align:right">
+      블록성질5 
+      <span style="color: #f00;">블록성질6</span>
+    </p>
+    <!-- (p(span(블록성질6))) -->
+
+    블록성질7
+    블록성질8
+    <!-- 인라인 성질의 엔터값 -->
+    
+    <div>
+      <h3 style="background-color: greenyellow;">텍스트 영역을 정의하는 태그</h3>
+      <p>강조 태그: 볼드, 이탤릭 처리</p>
+      <strong>볼드처리1</strong>
+      <b>볼드처리2</b>
+      <!-- 문자 두껍게 -->
+
+      <em>이탤릭처리1</em>
+      <i>이탤릭터리2</i>
+      <!-- 문자 기울임 -->
+
+      <p>취소선 : del</p>
+      <del>취소선</del>
+      <!-- 문자 취소선 -->
+    
+      <span><del>12,000원</del>=> 10,000원</span>
+      <!-- 예시 -->
+      
+      <p>상단표기, 하단표기</p>
+      <span>아이디 <sup style="color: red;">*</sup></span>
+      <span>CO<sub><small>2</small></sub></span>
+      
+      <p>글로벌화폐</p>
+      <span>$99.<small>99</small></span>
+      
+    </div>
+    
+    <hr />
+
+    <!-- 표(테이블) -->
+    <h2>table 구성</h2>
+    <p> tr: table row(가로 라인) / th: table headline(셀) / td: table description(셀)</p>
+    <table border="1" style="border-collapse: collapse;">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </table>
+
+    <table border="1" style="border-collapse: collapse; width: 100%; text-align: center;">
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>이름</th>
+          <th>나이</th>
+          <!-- th 기본 볼드처리 -->
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>강하늘</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>박보검</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>혜리</td>
+          <td>24</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>테이블 셀 간 병합</h3>
+    <table border="1" style="border-collapse: collapse; width: 100%; text-align: center;">
+      <colgroup>
+        <col width="15" />
+        <col width="20" />
+        <col width="35" />
+        <col width="35" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th colspan="2">구분</th>
+          <!-- <th></th> -->
+          <th>기존요금 <img src="./img/won.png" alt="" style="width: 14px;"></th>
+          <th scope="row">변경요금<img src="./img/won.png" alt="" style="width: 14px;"></th>
+        </tr>
+      </thead>
+      
+      <tfoot>
+        <tr>
+          <td colspan="4">주간 이용권은 09:00 ~ 17:00 까지 이용 가능합니다.</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td rowspan="3">주간 이용권</td>
+          <td>대인</td>
+          <td>48,000원</td>
+          <td>52,000원</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>청소년</td>
+          <td>41,000원</td>
+          <td>44,000원</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>소인/경로</td>
+          <td>38,000원</td>
+          <td>41,000원</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+    <table border="1" style="border-collapse: collapse; width: 100%; text-align: center;">
+
+      <colgroup>
+        <col width="30" />
+        <col width="5" />
+        <col width="15" />
+        <col width="50
+      " />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>상품</th>
+          <th>기간</th>
+          <th>특별요금</th>
+          <th>프로그램 내용</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="4">상기 요금은 학생 기준 10명 이상 예약단체에 한하여 적용.</td>
+        </tr>
+      </tfoot>
+
+      <tbody>
+        <tr>
+          <td>에버랜드</td>
+          <td rowspan="4">1/1~2/29</td>
+          <td>16,000원</td>
+          <td>축제 + 동물관람 + 이용권</td>
+        </tr>
+
+        <tr>
+          <td>캐리비안 베이</td>
+          <!-- <td></td> -->
+          <td>14,000원</td>
+          <td>이용권 + 구명자켓 (준비물: 수영복, 수영모, 수건 등)</td>
+        </tr>
+
+        <tr>
+          <td>2-Park 이용</td>
+          <!-- <td></td> -->
+          <td>24,000원</td>
+          <td>캐리비안베이 + 에버랜드</td>
+        </tr>
+
+        <tr>
+          <td>2-Park PKG</td>
+          <!-- <td></td> -->
+          <td>26,000원</td>
+          <td>캐리비안베이 + 에버랜드 + 식사권(단체식 or 밀쿠폰)</td>
+        </tr>
+      </tbody>
+    
+    </table>
+
+
+    <!-- 리스트 -->
+    <h2>리스트 항목: ol(order list: 순차적 목록), ul(unorder list: 비순차적 목록), dl(definition list: 정의된 목록)</h2>
+    
+    <h3>ol(order list: 순차적 목록): 블록성질</h3>
+    <p>type 속성 A(알파벳 대문자), a(알파벳 소문자), I(로마 숫자 대문자), i(로마 숫자 소문자), 기본값 1(아라비아 숫자)</p>
+    <br />
+    start 속성: 최초의 시작 숫자 또는 문자 지정
+
+    <h4>입사순서</h4>
+    <ol type="i" start="2">
+      <li>서류검토</li>
+      <li>1차 면접</li>
+      <li>2차 면접</li>
+      <li>최종 면접</li>
+      <li>건강검진</li>
+      <li>합격여부
+        <ol>
+          <li><div>합격통보</div></li>
+          <li><span>OT</span></li>
+        </ol>
+      </li>
+    </ol>
+
+    <h3>ul(unorder list: 비순차적 목록)</h3>
+    <p>[스타일 명] list-style의 값은 circle. disc, square, none 가 있다.</p>
+
+    <ul style="list-style: none;">
+      <li>바람과 함께 사라지다</li>
+      <li>엄마는 외계인</li>
+      <li>민트초코</li>
+    </ul>
+
+    <h>주의 사항: 웹에서는 대부분의 영역에 ul~li 으로 사용함. 단수인 경우는 사용하지 않음 / ul과 ol의 자식은 li만 사용할 수 있음(유효성체크:https://validator.w3.org/)</h>
+
+    <h3>dl(definition list: 정의된 목록)</h3>
+    <p>dl (definition list), dt (definition term), dd (definition description)</p>
+
+    <h4>UN 산하기구</h4>
+    <dl>
+      <dt>유니세프</dt>
+      <dd>유니세프는 ...</dd>
+      <dt>유네스코</dt>
+      <dd>유네스코는 ...</dd>
+    </dl>
+
+    <h3>메뉴 구성하기</h3>
+    <ul style="margin: 0; padding: 0; list-style-type: none; text-align: center;">
+      <li style="display: inline-block;">
+        <a href="#" style="text-decoration: none; color: #777;">메일</a>
+      </li>
+
+      <li style="display: inline-block;">
+        <a href="#" style="text-decoration: none; color: #777;">카페</a>
+      </li>
+
+      <li style="display: inline-block;">
+        <a href="#" style="text-decoration: none; color: #777;">블로그</a>
+      </li>
+
+      <li style="display: inline-block;">
+        <a href="#" style="text-decoration: none; color: #777;">쇼핑</a>
+      </li>
+    </ul>
+
+
+
+
+
+
+
+
+  </body>
+</html>

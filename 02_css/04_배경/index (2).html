@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_background</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h3>배경색상(background-color): 문자(red, blue, ...) / 16진수코드(#ff0000 -> #f00) / hsl(색상(deg), 채도(%), 명도(%)) / rgba(red (0 ~ 255), blue (0 ~ 255), green (0 ~ 255), alpha(0~1)) -> rgba(255,0,0,0.5)</h3>
+    <!-- alpha: 오퍼시티 -->
+    <div class="half_transparent">
+        <div class="dark_cover"></div>
+    </div>
+<br />
+<hr />
+
+
+    <h3>배경이미지(background-image:url (이미지 파일의 경로))</h3>
+    <div class="bgi_img_01"></div>
+<br />
+<hr />
+
+<h3>배경의 위치 선언(background-position: 수평위치 수직위치)</h3>
+<p>수평 위치선언: left, center right, 0~100%, px</p>
+<p>수직 위치선언: top, center, bottom, 0~100%, px</p>
+<div class="bgi_img_02"></div>
+<br />
+<hr />
+
+    <h3>배경의 사이즈 조정(background-size: cover / contain / 가로px / 세로px)</h3>
+    <p>cover: 가로사이즈가 세로사이즈보다 긴 경우, 화면의 높이를 기준으로 맞추겠다</p>
+    <p>contain: 세로사이즈가 가로사이즈보다 긴 경우, 화면의 세로 기준으로 맞추겠다. & 로고를 배경으로 보여주고자 할 때, 로고의 영역이 모두 보이도록 구성해주는 선언</p>
+    <div class="bgs_img_03"></div>
+    <div class="bgs_img_04"></div>
+<br />
+<hr />
+
+    <h3>배경의 반복(패턴) 설정: background-repeat</h3>
+    <div class="bgr_img_05"></div>
+    <br />
+    <hr />
+
+    <h3>parallax 효과(background-attach: scroll(defult) / fixed)</h3>
+    <!-- background에 구멍뚫기! -->
+    <div class="bgr_img_06"></div>
+    <br />
+    <hr />
+
+    <h3>통합 background</h3>
+    <p>background: 배경색상 배경이미지 배경반복 배경붙이기 배경위치/배경사이즈</p>
+    <!-- 쓰지말자 -->
+
+    <div class="total_bg"></div>
+    <br />
+    <hr />
+
+    <h3>부모배경과 자식배경 + 중앙에 글자 배치</h3>
+    <div class="parent_bg">
+        <div class="child_bg">
+            <h2>good luck~!</h2>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_font</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- <h2>폰트-1</h2>
+    <h3>폰트-2</h3> -->
+    <h2>폰트</h2>
+    <h3>폰트의 서체적용</h3>
+    <h4>1. 외부(Google fonts)에서 서체를 가져온다.</h4>
+    <p class="external_font">외부폰트 적용</p>
+
+    <h4>2. 자체 서버에 저장된 폰트를 적용</h4>
+    <p class="inner_font">내부폰트 적용</p>
+    <!-- 
+      #1. transfonter.org 에서 변형(eot, ptf, woff, woff2, svg) 작업진행
+      #2. 폴더내부로 옮긴 후, 경로 변경
+    -->
+
+    <h3>폰트의 크기(font-size): px, pt, em, rem, vw(view weight),vh(view height), %</h3>
+
+    <h4>고정형 단위: px, pt</h4>
+    <div class="unit_px">고졍형 단위 - px</div>
+    <div class="unit_pt">고졍형 단위 - pt</div>
+
+    <h4>유동형 단위: vw, vh</h4>
+
+    <div class="unit_vw">유동형 단위- vw</div>
+    <div class="unit_vh">유동형 단위- vh</div>
+
+    <h4>부모 또는 조상이 영향을 받는 단위: em, rem</h4>
+    <div class="unit_em">
+      <h5>타이틀 - em</h5>
+      <p>부모의 영향 받는 단위 - em</p>
+
+    </div>
+    <div class="unit_rem">
+      <p>조상의 영향을 받는 단위 - rem</p>
+    </div>
+
+    <h3>폰트 가중치(font-weight): bold, normal, lighter, 100 ~ 900</h3>
+    <p class="fw_100">폰트 가중치 - 100</p>
+    <p class="fw_200">폰트 가중치 - 200</p>
+    <p class="fw_300">폰트 가중치 - 300</p>
+    <p class="fw_400">폰트 가중치 - 400</p>
+    <p class="fw_500">폰트 가중치 - 500</p>
+    <p class="fw_600">폰트 가중치 - 600</p>
+    <p class="fw_700">폰트 가중치 - 700</p>
+    <p class="fw_800">폰트 가중치 - 800</p>
+    <p class="fw_900">폰트 가중치 - 900</p>
+
+    <p class="fw_lighter">폰트 가중치 - lighter</p>
+    <p class="fw_normal">폰트 가중치 - normal</p>
+    <p class="fw_bold">폰트 가중치 - bold</p>
+    
+    <h3>폰트 스타일(font-style): normal, italic</h3>
+    <p class="fs_italic">폰트 스타일 - italic</p>
+
+    <h3>문단의 수평방향 정렬(text-align): left(default), center, right justfy</h3>
+    <p class="ta_left">문단의 가로정렬 - left</p>
+    <p class="ta_center">문단의 가로정렬 - center</p>
+    <p class="ta_right">문단의 가로정렬 - right</p>
+    <span class="inline_ta_center">문단(인라인)의 가로정렬</span>
+
+    <p class="ta_justfy">문단의 가로정렬 - justfy 문단의 가로정렬 - justfy 문단의 가로정렬 - justfy 문단의 가로정렬 - justfy 문단의 가로정렬 - justfy 문단의 가로정렬 - justfy</p>
+<hr />
+
+    <h3>수직방향에서의 상대적 정렬(vertical-align): top, middle, bottom</h3>
+    <!-- middle은 vertical-align 에서만 적용됨 주의 -->
+    <div class="rel_align">
+      <span>인라인1</span>
+      <span>인라인2</span>
+    </div>
+
+    <div class="cart">
+      <a href="">
+        <img src="./img/cart.png" alt="" />
+        <span>CART</span>
+      </a>
+    </div>
+<hr />
+
+    <h3>들여쓰기 & 내여쓰기(text-indent): 수치로 부여</h3>
+    <div class="ti_plus">들여쓰기</div>
+    <div class="ti_minus">내여쓰기</div>
+<hr />
+
+    <h3>대문자, 소문자, 첫글자만 대문자(text-transform): uppercase, lowercase, capitalize</h3>
+    <p class="tt_uppercase">uppercase</p>
+    <p class="tt_lowercase">LOWRERCASE</p>
+    <p class="tt_capitalize">god of iron</p>
+    <hr />
+    <h3>문장에 가로줄 긋기(text-decoration): underline, line-through, overline, none</h3>
+    <p class="td_underline">아랫줄 긋기(안씀)</p>
+    <p class="td_throught">중간줄 긋기(안씀)</p>
+    <p class="td_overline">윗줄 긋기(안씀)</p>
+    <a class="td_none" href="">선 없애기</a>
+<hr />
+    <h3>문단의 높이(line-height): 0 ~ 실수값(폰트 사이즈 대비 배수단위), 0 ~ 정수px(실제 적용될 높이를 px단위로 지정)</h3>
+
+    <p class="lh_multiple">배수조정</p>
+    <p class="lh_px">실제높이 px조정</p>
+
+  </body>
+</html>

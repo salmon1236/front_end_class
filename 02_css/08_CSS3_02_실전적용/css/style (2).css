@@ -1,0 +1,426 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+header,
+main,
+section,
+article,
+nav,
+aside,
+footer {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+/* 자동 슬라이드 이미지 - fadeIn 효과 적용 */
+.fadeImg {
+  width: 100%;
+  height: 400px;
+  background-image: url(../img/img1.jpg);
+  /* ▲ 최초 이미지 지정 */
+  background-position: 50% 50%;
+  background-size: cover;
+  animation: 20s fadeInImg infinite;
+  animation-delay: 4s;
+}
+@keyframes fadeInImg {
+  0% {
+    background-image: url(../img/img1.jpg);
+  }
+  25% {
+    background-image: url(../img/img2.jpg);
+  }
+  50% {
+    background-image: url(../img/img3.jpg);
+  }
+  75% {
+    background-image: url(../img/img4.jpg);
+  }
+  100% {
+    background-image: url(../img/img1.jpg);
+  }
+}
+
+/* 자동 슬라이드 이미지 - 좌우로 이동하는 효과 적용 */
+.slider_1 {
+  width: 400px;
+  width: 100%;
+  height: 340px;
+  height: 400px;
+  /* padding: 20px 0; */
+  /* background-color: #aaf; */
+  /* margin-left: 300px; */
+  overflow: hidden;
+}
+.slider_1 .slide_cover {
+  width: 300%;
+  height: 100%;
+  /* padding: 20px 0; */
+  /* background-color: #eee; */
+  display: flex;
+  animation: 20s slide_slider infinite;
+}
+.slider_1 .slide_cover > div {
+  width: calc(100% / 3);
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider_1 .slide_cover > div h2 {
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+.slider_1 .slide_cover > div:nth-child(1) {
+  background-image: url(../img/img1.jpg);
+  margin: 0 5px;
+}
+.slider_1 .slide_cover > div:nth-child(2) {
+  background-image: url(../img/img2.jpg);
+  margin: 0 5px;
+}
+.slider_1 .slide_cover > div:nth-child(3) {
+  background-image: url(../img/img3.jpg);
+  margin: 0 5px;
+}
+
+@keyframes slide_slider {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+/* click 요소에 따른 색상 변화 */
+#click_test_1 {
+  width: 500px;
+  height: 300px;
+  position: relative;
+}
+#click_test_1 input[type="radio"] {
+  display: none;
+}
+#click_test_1 label {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+#click_test_1 label:nth-of-type(1) {
+  background-color: #faf;
+  bottom: 80px;
+}
+#click_test_1 label:nth-of-type(2) {
+  background-color: #ffa;
+  bottom: 40px;
+}
+#click_test_1 label:nth-of-type(3) {
+  background-color: #aff;
+  bottom: 0;
+}
+#click_test_1 .result {
+  margin-left: 80px;
+  width: 420px;
+  height: 100%;
+  background-color: #ddd;
+}
+#click_test_1 input#click_0:checked ~ .result {
+  background-color: #faf;
+}
+#click_test_1 input#click_1:checked ~ .result {
+  background-color: #ffa;
+}
+#click_test_1 input#click_2:checked ~ .result {
+  background-color: #aff;
+}
+
+/* 네비게이션 슬라이드(좌우) */
+#pagerSlider {
+  width: 400px;
+  width: 100%;
+  height: 340px;
+  height: 400px;
+  /* padding: 10px 0; */
+  background-color: #ffa;
+  /* margin-left: 300px; */
+  position: relative;
+  overflow: hidden;
+}
+#pagerSlider input[type="radio"] {
+  display: none;
+}
+#pagerSlider .pager {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  column-gap: 20px;
+  display: flex;
+  transform: translateX(-50%);
+}
+#pagerSlider .pager label {
+  display: block;
+  width: 60px;
+  height: 10px;
+  background-color: #eee;
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.25);
+  text-indent: -999999px;
+  cursor: pointer;
+}
+#pagerSlider .frame {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  /* padding: 10px 0; */
+  background-color: #ddd;
+  transition: margin-left 0.5s;
+}
+#pagerSlider .frame .slide {
+  width: calc(100% / 3);
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#pagerSlider .frame .slide:nth-child(1) {
+  background-image: url(../img/img4.jpg);
+  padding: 0 10px;
+}
+#pagerSlider .frame .slide:nth-child(2) {
+  background-image: url(../img/img5.jpg);
+  padding: 0 10px;
+}
+#pagerSlider .frame .slide:nth-child(3) {
+  background-image: url(../img/img6.jpg);
+  padding: 0 10px;
+}
+
+#pagerSlider input#slide_1:checked ~ .pager label:nth-child(1) {
+  background-color: rgb(0, 255, 255);
+  box-shadow: none;
+}
+#pagerSlider input#slide_2:checked ~ .pager label:nth-child(2) {
+  background-color: rgb(0, 255, 255);
+  box-shadow: none;
+}
+#pagerSlider input#slide_3:checked ~ .pager label:nth-child(3) {
+  background-color: rgb(0, 255, 255);
+  box-shadow: none;
+}
+
+#pagerSlider input#slide_1:checked ~ .frame {
+  margin-left: 0;
+}
+#pagerSlider input#slide_2:checked ~ .frame {
+  margin-left: -100%;
+}
+#pagerSlider input#slide_3:checked ~ .frame {
+  margin-left: -200%;
+}
+
+/* 네비게이션 슬라이드(fadeIn) */
+#pagerFade {
+  width: 100%;
+  height: 400px;
+  background-color: #aaf;
+  position: relative;
+  overflow: hidden;
+}
+#pagerFade input[type="radio"] {
+  display: none;
+}
+#pagerFade .pager {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  column-gap: 20px;
+  display: flex;
+  transform: translateX(-50%);
+}
+#pagerFade .pager label {
+  display: block;
+  width: 60px;
+  height: 10px;
+  background-color: #eee;
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.25);
+  text-indent: -999999px;
+  cursor: pointer;
+}
+#pagerFade .frame {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: background-image 0.5s;
+}
+#pagerFade input#slide_01:checked ~ .pager label:nth-child(1) {
+  background-color: rgb(0, 255, 255);
+  box-shadow: none;
+}
+#pagerFade input#slide_02:checked ~ .pager label:nth-child(2) {
+  background-color: rgb(0, 255, 255);
+  box-shadow: none;
+}
+#pagerFade input#slide_03:checked ~ .pager label:nth-child(3) {
+  background-color: rgb(0, 255, 255);
+  box-shadow: none;
+}
+
+#pagerFade input#slide_01:checked ~ .frame {
+  background-image: url(../img/img7.jpg);
+}
+#pagerFade input#slide_02:checked ~ .frame {
+  background-image: url(../img/img8.jpg);
+}
+#pagerFade input#slide_03:checked ~ .frame {
+  background-image: url(../img/img9.jpg);
+}
+
+/* 탭버튼과 탭박스 */
+
+#tab {
+  width: 800px;
+  height: 400px;
+  background-color: #eee;
+  margin: 0 auto;
+}
+#tab input[type="radio"] {
+  /* display: none; */
+}
+#tab .tabBtn {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  position: relative;
+}
+#tab .tabBtn label {
+  display: block;
+  width: calc(100% / 3);
+  height: 100%;
+  background-color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+#tab .tabBtn .bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% / 3);
+  height: 4px;
+  background-color: #444;
+  transition: left 0.5s;
+}
+#tab .tab_cont {
+  width: 100%;
+  height: 360px;
+  border-top: 1px solid #444;
+  position: relative;
+  display: flex;
+}
+#tab .tab_cont .cont {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.5s;
+  text-indent: -999999px;
+}
+
+#tab .tab_cont .cont .box {
+  width: calc(100% / 3 - 20px);
+  height: 100%;
+  margin: 0 10px;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#tab .tab_cont .cont_1 .box:nth-child(1) {
+  background-image: url(../img/img1.jpg);
+}
+#tab .tab_cont .cont_1 .box:nth-child(2) {
+  background-image: url(../img/img2.jpg);
+}
+#tab .tab_cont .cont_1 .box:nth-child(3) {
+  background-image: url(../img/img3.jpg);
+}
+#tab .tab_cont .cont_2 .box:nth-child(1) {
+  background-image: url(../img/img4.jpg);
+}
+#tab .tab_cont .cont_2 .box:nth-child(2) {
+  background-image: url(../img/img5.jpg);
+}
+#tab .tab_cont .cont_2 .box:nth-child(3) {
+  background-image: url(../img/img6.jpg);
+}
+#tab .tab_cont .cont_3 .box:nth-child(1) {
+  background-image: url(../img/img7.jpg);
+}
+#tab .tab_cont .cont_3 .box:nth-child(2) {
+  background-image: url(../img/img8.jpg);
+}
+#tab .tab_cont .cont_3 .box:nth-child(3) {
+  background-image: url(../img/img9.jpg);
+}
+
+#tab input#t_1:checked ~ .tab_cont .cont_1 {
+  opacity: 1;
+}
+#tab input#t_2:checked ~ .tab_cont .cont_2 {
+  opacity: 1;
+}
+#tab input#t_3:checked ~ .tab_cont .cont_3 {
+  opacity: 1;
+}
+
+#tab input#t_1:checked ~ .tabBtn .bar {
+  left: 0;
+}
+#tab input#t_2:checked ~ .tabBtn .bar {
+  left: calc(100% / 3);
+}
+#tab input#t_3:checked ~ .tabBtn .bar {
+  left: calc(100% / 3 * 2);
+}

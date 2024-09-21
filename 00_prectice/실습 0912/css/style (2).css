@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+header,
+section,
+article,
+nav,
+aside,
+footer {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+
+/* 실습 1. 메뉴구성 */
+#pre1 {
+  width: 240px;
+  background-color: #363636;
+}
+#pre1 .menu li a {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  list-style: none;
+}
+
+/* 실습 2. 메뉴구성 */
+#pre2 {
+  width: 240px;
+  background-color: #363636;
+}
+#pre2 .menu li {
+  display: flex;
+  height: 40px;
+
+  align-items: center;
+  margin: 0 0 0 10px;
+}
+#pre2 .menu li a {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  list-style: none;
+}
+
+/* 실습 3. 메뉴구성을 세로방향으로 구성*/
+#pre3 {
+  width: 240px;
+  background-color: #363636;
+  padding: 10px 0;
+  margin: 0;
+}
+#pre3 .menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#pre3 .menu li {
+  display: flex;
+  height: 40px;
+  border-bottom: 1px solid #fff;
+  align-items: center;
+  padding-left: 10px;
+}
+#pre3 .menu li:last-child {
+  border-bottom: none;
+}
+#pre3 .menu li a {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+#pre3 .menu li:hover a {
+  color: #555;
+}
+
+/* 실습 4. 메뉴구성 가로방향 */
+#pre4 {
+  width: 800px;
+  height: 124px;
+  background-color: #ffcccc;
+  padding: 50px;
+}
+#pre4 .menu {
+  display: flex;
+}
+#pre4 .menu li {
+  padding: 0 20px;
+}
+#pre4 .menu li a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #363636;
+  background-color: #ffaaff;
+}
+
+/* 실습 5. 메뉴구성 가로방향 + 공간 부여 */
+#pre5 {
+  width: 800px;
+  height: 144px;
+  background-color: #363636;
+  padding: 50px;
+  display: flex;
+  text-align: center;
+}
+#pre5 .menu {
+  display: flex;
+}
+#pre5 .menu li {
+  margin: 0 20px;
+  background-color: #ffaaff;
+  padding: 10px 0;
+}
+#pre5 .menu li:hover {
+  background-color: #555;
+  color: #ff0000;
+}
+#pre5 .menu li a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 실습 6. 메뉴구성 가로방향 + 공간 부여 2 */
+#pre6 {
+  width: 800px;
+  height: 144px;
+  background-color: #363636;
+  padding: 50px;
+  display: flex;
+  text-align: center;
+}
+#pre6 .menu {
+  display: flex;
+}
+#pre6 .menu li {
+  margin: 0 20px;
+  background-color: #ffaaff;
+  padding: 10px 0;
+}
+#pre6 .menu li:hover {
+  background-color: transparent;
+  border-bottom: 2px solid #fff;
+}
+#pre6 .menu li a {
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 실습 7. 메뉴구성 가로방향 + 하위메뉴 */
+#pre7 {
+  width: 800px;
+  height: 144px;
+  background-color: #363636;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
+#pre7 .menu {
+  display: flex;
+}
+#pre7 .menu > li {
+  width: 120px;
+  padding: 0px 20px;
+  margin-right: 20px;
+  background-color: #ffaaff;
+  text-align: center;
+  position: relative;
+}
+#pre7 .menu > li:hover {
+  background-color: transparent;
+}
+#pre7 .menu > li > a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  padding: 10px 0;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  background-color: #999;
+  padding: 10px 0;
+  width: 120px;
+}
+.submenu a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  padding: 10px 0;
+}
+#pre7 .menu > li:hover > .submenu {
+  display: block;
+  border-bottom: 2px solid #fff;
+}
+
+#pre7 {
+  width: 800px;
+  height: 144px;
+  background-color: #363636;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
+
+#pre7 .menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#pre7 .menu > li {
+  width: 120px;
+  padding: 0px 20px;
+  margin-right: 20px;
+  background-color: #ffaaff;
+  text-align: center;
+  position: relative;
+}
+
+#pre7 .menu > li:hover {
+  background-color: transparent;
+}
+
+#pre7 .menu > li > a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  padding: 10px 0;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #999;
+  padding: 10px 0;
+  width: 120px;
+  box-sizing: border-box;
+}
+
+.submenu li {
+  text-align: center;
+}
+
+.submenu a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  padding: 10px 0;
+}
+
+#pre7 .menu > li:hover > .submenu {
+  display: block;
+}
+
+#pre7 .menu > li:hover > .submenu a {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 8px;
+}
+
+/* 실습 8. 메뉴구성 세로방향 + 마우스오버시 하위메뉴 */
+#pre8 {
+  width: 300px;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+.mainMenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mainMenu > li {
+  background-color: #ccc;
+  padding: 10px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+  padding-left: 10px; 
+}
+
+.mainMenu > li:hover {
+  background-color: #5c5c5c; 
+}
+
+.mainMenu > li > a {
+  color: #000;
+  display: block;
+}
+
+.submenu {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: #999;
+  width: 100%;
+  z-index: 1;
+}
+
+.submenu li {
+  background-color: #666;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.submenu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.mainMenu > li:hover > .submenu {
+  display: block;
+}
+

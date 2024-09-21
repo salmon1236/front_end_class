@@ -1,0 +1,169 @@
+@charset "stf-8";
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+/* Google fonts는 'font-face' 보다 위에 있는게 좋음 */
+@font-face {
+  font-family: "BM DoHyeon";
+  src: url("../fonts/BMDoHyeon.eot");
+  src: url("../fonts/BMDoHyeon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/BMDoHyeon.woff2") format("woff2"),
+    url("../fonts/BMDoHyeon.woff") format("woff"),
+    url("../fonts/BMDoHyeon.ttf") format("truetype"),
+    url("../fonts/BMDoHyeon.svg#BMDoHyeon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* * {
+  font-family: "BM DoHyeon";
+  font-family: "Single Day", cursive;} */
+.external_font {font-family: "Single Day", cursive;}
+.inner_font {font-family: "BM DoHyeon";}
+
+/* 폰트의 크기(font-size) 최소는 14px로 인지 */
+
+.unit_px {font-size: 20px;}
+/* 픽셀단위 */
+.unit_pt {font-size: 20pt;}
+/* 포인트단위(잘 안씀) */
+
+.unit_vw {font-size: 10vw;}
+/* 가로방향 화면 채움 */
+.unit_vh {font-size: 10vh;}
+/* 세로방향 화면 채움 */
+
+.unit_em {
+    font-size: 50px;
+    line-height: 1;
+    background-color: #faa;
+}
+.unit_em > h5 {
+    font-size: 0.75em;
+}
+.unit_em > p {
+    font-size: 0.5em;
+}
+/* 부모가 폰트의 크기를 선언하지 않은 경우, 1em -16px
+부모가 폰트의 크기를 24px로 지정한 경우 자식의 폰트가 0.75em으로 설정 했다면 18px이 된다. */
+
+html {
+    /* font-size: 40px; */
+}
+.unit_rem > p {
+    font-size: 0.5rem;
+    line-height: 1;
+    background-color: #f90;
+}
+/* 조상이 폰트의 크기를 선언하지 않은 경우, 1rem -16px
+조상이 폰트의 크기를 24px로 지정한 경우 후손의 폰트가 0.75em으로 설정 했다면 18px이 된다. */
+
+/* 폰트 가중치(font-weight)/ .fw */
+.fw_100{font-weight: 100;}
+.fw_200{font-weight: 200;}
+.fw_300{font-weight: 300;}
+.fw_400{font-weight: 400;}
+.fw_500{font-weight: 500;}
+.fw_600{font-weight: 600;}
+.fw_700{font-weight: 700;}
+.fw_800{font-weight: 800;}
+.fw_900{font-weight: 900;}
+
+.fw_lighter {font-weight: lighter;}
+.fw_normal {font-weight: normal;}
+.fw_bold {font-weight: bold;}
+
+/* 폰트 스타일(font-style) */
+.fs_italic {
+    font-style: italic;
+}
+
+/* 문단의 수평방향 정렬(text-align) / .ta(l,c,r,j)*/
+.ta_left{text-align: left; background-color: #ffc;}
+.ta_center{text-align: center; background-color: #cff;}
+.ta_right{text-align: right; background-color: #fcf;}
+
+.inline_ta_center{text-align: center; background-color: #ccf; display: block;}
+/* display: block 인라인의 성질을 블럭으로 바꿈 */
+
+.ta_justfy {text-align: justify;}
+
+/* 수직방향에서의 상대적 정렬(vertical-align) */
+.rel_align span:nth-child(1){
+    font-size: 20px;
+    background-color: #aff;
+    line-height: 1;
+    vertical-align: middle;
+}
+.rel_align span:nth-child(2){
+    font-size: 40px;
+    background-color: #faf;
+    line-height: 1;
+    vertical-align: middle;
+}
+.cart {}
+.cart a{
+    background-color: #caf;
+    text-decoration: none;
+    line-height: 2;
+    color: #000;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 16px;
+}
+.cart a img{
+    height: 20px;
+    vertical-align: middle;
+}
+.cart a span {
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* 들여쓰기 & 내여쓰기(text-indent) */
+.ti_plus {
+    text-indent: 40px;
+}
+.ti_minus {
+    text-indent: -9999px;
+}
+
+
+/* 대문자, 소문자, 첫글자만 대문자(text-transform) */
+.tt_uppercase {
+    text-transform: uppercase;
+}
+.tt_lowercase {
+    text-transform: lowercase;
+}
+.tt_capitalize {
+    text-transform: capitalize;
+}
+
+
+/* 문장에 가로줄 긋기(text-decoration) */
+.td_underline {
+    text-decoration: underline;
+}
+.td_throught {
+    text-decoration: line-through;
+}
+.td_overline {
+    text-decoration: overline;
+}
+.td_none {
+    text-decoration: none;
+}
+
+
+
+/* 문단의 높이(line-height) */
+.lh_multiple {
+    background-color: #afa;
+    line-height: 4;
+}
+/* 글자에 의존 */
+.lh_px {
+    background-color: #faf;
+    line-height: 40px;
+}
+/* 공간에 의존 */

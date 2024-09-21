@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>07_CSS3_01</title>
+  </head>
+  <body>
+    <h2>경계선(border) 처리</h2>
+    <p>border-radius: 20px</p>
+    <div class="radius_01"></div>
+
+    <p>border-radius: 10px(좌상단) 20px(우상단) 30px(우하단) 40px(좌하단)</p>
+    <div class="radius_02"></div>
+
+    <p>border-radius: 10px(좌상단&우하단) 30px(우상단&좌하단)</p>
+    <div class="radius_03"></div>
+
+    <p>border-radius: 10px(좌상단) 30px(우상단&좌하단) 60px(우하단)</p>
+    <div class="radius_04"></div>
+
+    <p>1/4 원 구성시</p>
+    <div class="quarter_radius"></div>
+
+    <p>1/2 원 구성시</p>
+    <div class="half_radius"></div>
+
+    <p>타원 구성시</p>
+    <div class="ellipse_raidus"></div>
+
+    <p>캡슐 구성시</p>
+    <div class="capsule_radius"></div>
+
+    <p>불규칙 원 구성 시</p>
+    <div class="unbalunce_radius"></div>
+
+    <p>Gradient 적용</p>
+    <h3>선형 그라디언트</h3>
+    <div class="gr_liner"></div>
+
+    <h3>원형 그라디언트</h3>
+    <div class="gr_radial_1"></div>
+    <div class="gr_radial_2"></div>
+
+    <h2>[공간에 대한 그림자 부여]</h2>
+    <p>box-shadow: x-offset 값 y-offset값 스프레드값(번짐정도) 색상</p>
+    <div class="shadow_space_rect"></div>
+    <div class="shadow_space_rect_inset"></div>
+    <div class="neomorphism_box">
+      <div></div>
+    </div>
+
+    <h2>텍스트 그림자 부여하기</h2>
+    <p>text-shadow: x-offset값 y-offset값 스프레드값(번짐정도) 색상;</p>
+    <div class="text_shadow">
+      <h2>TEXT SHADOW</h2>
+    </div>
+
+    <h2>텍스트 그라디언트 효과</h2>
+    <div class="text_gr">
+      <h2>TEXT GRADIENT</h2>
+    </div>
+
+    <h2>
+      영역내부에 글자가 넘칠 경우, 후반부 글자를 자르고 "..."으로 말줄임표 처리
+    </h2>
+    <div class="text_overflow">
+      <h3>
+        2024년 10월 사내 회식 모임 공지 : [장소] 솥뚜껑 삼겹살 / [시간] 오후
+        7시반
+      </h3>
+    </div>
+    <h2>단어에 대한 공간 영역의 통제</h2>
+    <div class="word_space_1">
+      <p>asosdgoobkufeywblfabyefblawbf</p>
+    </div>
+    <div class="word_space_2">
+      <p>
+        강장공장공장장은강공장장이고공장공장공장장은공공장장이다...강장공장공장장은강공장장이고공장공장공장장은공공장장이다...강장공장공장장은강공장장이고공장공장공장장은공공장장이다...강장공장공장장은강공장장이고공장공장공장장은공공장장이다...
+      </p>
+    </div>
+    <h2>
+      단어 사이의 간격 조정(word_spacing) / 글자 사이의 간격 조정
+      (letter_spacing)
+    </h2>
+    <div class="word_spacing">
+      <p>Special Dishes in Today</p>
+    </div>
+    <div class="letter_spacing">
+      <p>Special Dishes in Today</p>
+    </div>
+    <p>
+      버튼에 적용될 공간이 한정된 디자인의 경우, letter_spacing을 적용하여
+      자간을 강제로 조정한다.(최소단위를 -2px 밑으로 저장하지 말 것 => 가독성
+      문제 발생)
+    </p>
+
+    <h2>공간 개념상 접근시 선언</h2>
+    <pre>
+      화이트 스페이스 공간
+    </pre>
+    <div class="white_space">
+      <div class="default">
+        화이트 스페이스의 기본값 화이트 스페이스의 기본값 화이트 스페이스의
+        기본값
+      </div>
+      <div class="noWrap">
+        화이트 스페이스의 기본값 noWrap 화이트 스페이스의 기본값 noWrap화이트
+        스페이스의 기본값 noWrap
+      </div>
+      <div class="pre">
+        화이트 스페이스의 pre화이트 스페이스의 pre화이트 스페이스의 pre화이트
+        스페이스의 pre
+      </div>
+    </div>
+
+    <h2>변형 - transform</h2>
+    <h3>회전 변형 transform: rotate(각도값deg)</h3>
+    <div class="tr_rotate"></div>
+    <div class="tr_rotate_x"></div>
+    <div class="tr_rotate_y"></div>
+
+    <h3>이동 변형 transform: translate(이동 거리)</h3>
+    <div class="tr_tanslate">
+      <div class="wrap">
+        <div class="div kakao1"></div>
+        <div class="div kakao2"></div>
+      </div>
+    </div>
+
+    <h3>크기 변형 transform: scale(0~1~이상의 소수점)</h3>
+    <div class="tr_scale">
+      <div class="kakao3"></div>
+    </div>
+    <h3>복합 변형 transform: rotate(25deg) scale(1.15)</h3>
+    <div class="tr_multi">
+      <div class="kakao4"></div>
+    </div>
+    <h2>애니메이션 효과: animation + @keyframes</h2>
+    <p>만화영상: 여러장의 프레임을 기반으로 동적 효과를 구성</p>
+    <p>@keyframes: 시간을 통제하여 대상물을 동적으로 보여지게끔 구현</p>
+    <div class="ani_01">
+      <img src="./img/cha1.png" alt="" />
+    </div>
+  </body>
+</html>

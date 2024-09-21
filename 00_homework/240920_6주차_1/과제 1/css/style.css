@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/* 공통 스타일 */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+section,
+article,
+nav,
+aside,
+footer {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 조건 1: 브라우저 전체를 활용하여 멀티 배경 이미지를 넣으시오. */
+body {
+  background: url("../img/grapes-bg-left.png") left center no-repeat,
+    url("../img/grapes-bg-right.png") right center no-repeat;
+  background-size: 240px;
+  padding: 60px;
+}
+
+/* 조건 2: 내부 프레임 공간은 가로만 1200px으로 설정하고 중앙에 위치시키시오. */
+#fruits {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  background-position: 50% 50%;
+}
+
+/* 조건 3: 가로 배치된 각 10개의 박스 영역은 각 공간을 5분할로 적용하고 패딩을 양측면에 10px 하단으로 20px 부여 */
+.image-box {
+  padding: 0 10px 20px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+/* 조건 4: 각 박스 내부에 공간을 구성 */
+.image-box:nth-child(1) {
+  background-image: url("../img/fruit_01.jpg");
+}
+.image-box:nth-child(2) {
+  background-image: url("../img/fruit_02.jpg");
+}
+.image-box:nth-child(3) {
+  background-image: url("../img/fruit_03.jpg");
+}
+.image-box:nth-child(4) {
+  background-image: url("../img/fruit_04.jpg");
+}
+.image-box:nth-child(5) {
+  background-image: url("../img/fruit_05.jpg");
+}
+.image-box:nth-child(6) {
+  background-image: url("../img/fruit_06.jpg");
+}
+.image-box:nth-child(7) {
+  background-image: url("../img/fruit_07.jpg");
+}
+.image-box:nth-child(8) {
+  background-image: url("../img/fruit_08.jpg");
+}
+.image-box:nth-child(9) {
+  background-image: url("../img/fruit_09.jpg");
+}
+.image-box:nth-child(10) {
+  background-image: url("../img/fruit_10.jpg");
+}
+
+.image-box {
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 220px;
+}
+
+/* 조건 5: 이미지 공간은 배경 사이즈 cover 적용하고, 중앙에 이미지 위치시키시오 */
+.image-box:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #555;
+}

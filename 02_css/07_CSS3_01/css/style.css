@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+header,
+main,
+section,
+article,
+nav,
+aside,
+footer {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+
+.radius_01 {
+  width: 200px;
+  height: 200px;
+  background-color: #aff;
+  background-image: url(../img/land_01.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+
+  border-radius: 20px;
+  border-radius: 100%;
+  border-radius: 100px;
+  border-radius: 50%;
+}
+.radius_02 {
+  width: 200px;
+  height: 200px;
+  background-color: #faa;
+  border-radius: 10px 20px 30px 40px;
+}
+.radius_03 {
+  width: 200px;
+  height: 200px;
+  background-color: #afa;
+  border-radius: 10px 30px;
+}
+.radius_04 {
+  width: 200px;
+  height: 200px;
+  background-color: #fa5;
+  border-radius: 10px 30px 60px;
+}
+.quarter_radius {
+  /* 정사각형이어야 함 */
+  width: 200px;
+  height: 200px;
+  background-color: #f0f;
+  border-radius: 200px 0 0;
+}
+.half_radius {
+  width: 100px;
+  height: 200px;
+  background-color: #f90;
+  border-radius: 100px 0 0 100px;
+}
+.ellipse_raidus {
+  width: 200px;
+  height: 100px;
+  background-color: #0ff;
+  border-radius: 50%;
+}
+.capsule_radius {
+  width: 200px;
+  height: 100px;
+  background-color: #f0f;
+  border-radius: 50px;
+}
+.unbalunce_radius {
+  width: 200px;
+  height: 200px;
+  background-color: #faf;
+  border-radius: 38% 62% 63% 37% / 41% 43% 57% 59%;
+}
+.gr_liner {
+  width: 200px;
+  height: 200px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffcf32+0,f830ff+50,f830ff+100,0082e5+100 */
+  background: linear-gradient(
+    45deg,
+    #ffcf32 0%,
+    #f830ff 50%,
+    #f830ff 100%,
+    #0082e5 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.gr_radial_1 {
+  width: 400px;
+  height: 200px;
+  background: radial-gradient(
+    ellipse at center,
+    #ffcf32 0%,
+    #f830ff 50%,
+    #f830ff 100%,
+    #0082e5 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.gr_radial_2 {
+  width: 400px;
+  height: 200px;
+  margin-top: 20px;
+  background: radial-gradient(
+    circle,
+    #ffcf32 0%,
+    #f830ff 50%,
+    #f830ff 100%,
+    #0082e5 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.shadow_space_rect {
+  width: 200px;
+  height: 200px;
+  background-color: #faa;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.shadow_space_rect_inset {
+  width: 200px;
+  height: 200px;
+  background-color: #af9;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.neomorphism_box {
+  width: 300px;
+  height: 300px;
+  background-color: #efefef;
+  padding: 100px;
+}
+.neomorphism_box div {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.5),
+    -5px -5px 5px rgba(255, 255, 255, 0.5);
+}
+.text_shadow {
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/bg_2.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text_shadow h2 {
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255, 255, 0, 1);
+  font-size: 45px;
+}
+.text_gr {
+  width: 100%;
+  height: 200px;
+  background-color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text_gr h2 {
+  font-size: 45px;
+  background: linear-gradient(0deg, #f0f, #08f);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text_overflow {
+  width: 300px;
+  padding: 8px 0;
+  background-color: #ffc;
+}
+.text_overflow h3 {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.word_space_1 {
+  width: 200px;
+  background-color: #0082e5;
+}
+
+.word_space_1 p {
+  word-break: break-all;
+}
+.word_space_2 {
+  width: 240px;
+  background-color: #aff;
+}
+.word_space_2 p {
+  word-break: keep-all;
+}
+.word_spacing {
+  word-spacing: 10px;
+}
+.letter_spacing {
+  letter-spacing: 10px;
+}
+.white_space {
+  width: 200px;
+  height: 500px;
+  background-color: #aff;
+}
+.white_space .noWrap {
+  white-space: nowrap;
+}
+.white_space .pre {
+  white-space: pre;
+}
+.tr_rotate {
+  width: 100px;
+  height: 100px;
+  background-image: url(../img/kakao_01.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: transform 1s;
+  transform-origin: 10px 10px;
+  /* transform-origin: x축 y축 */
+}
+.tr_rotate:hover {
+  transform: rotate(1440deg);
+}
+
+.tr_rotate_x {
+  width: 100px;
+  height: 100px;
+  background-image: url(../img/kakao_02.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: transform 1s;
+}
+.tr_rotate_x:hover {
+  transform: rotateX(180deg);
+}
+.tr_rotate_y {
+  width: 100px;
+  height: 100px;
+  background-image: url(../img/kakao_03.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: transform 1s;
+}
+.tr_rotate_y:hover {
+  transform: rotateY(180deg);
+}
+
+/* 회전 변형 transform: rotate(각도값deg) */
+.tr_tanslate {
+  width: 100px;
+  height: 100px;
+  background-color: #faf;
+  overflow: hidden;
+}
+.tr_tanslate .wrap {
+  width: 100%;
+  height: 200px;
+  height: 200%;
+  transition: transform 0.5s;
+}
+.tr_tanslate:hover .wrap {
+  transform: translateY(-100px);
+  transform: translateY(-50%);
+}
+.tr_tanslate .wrap .kakao1 {
+  width: 100%;
+  height: 100px;
+  height: 50%;
+  background-image: url(../img/kakao_01.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.tr_tanslate .wrap .kakao2 {
+  width: 100%;
+  height: 100px;
+  height: 50%;
+  background-image: url(../img/kakao_02.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+/* 크기 변형 transform: scale(0~1~이상의 소수점) */
+.tr_scale {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.tr_scale .kakao3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/kakao_03.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+.tr_scale:hover .kakao3 {
+  transform: scale(1.2);
+}
+/* 복합 변형 transform: rotate(25deg) scale(1.15 */
+.tr_multi {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.tr_multi .kakao4 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/kakao_04.jpg);
+  transform: rotate(0deg) scale(1.2);
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+.tr_multi:hover .kakao4 {
+  transform: rotate(10deg) scale(1.15);
+}
+
+/* 애니메이션 효과: animation + @keyframes */
+.ani_01 {
+  width: 100%;
+  height: 400px;
+  background-color: #ddd;
+  position: relative;
+}
+.ani_01 img {
+  position: absolute;
+  height: 80px;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+  animation: ani_cart 5s infinite linear;
+}
+@keyframes ani_cart {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 90%;
+  }
+  50% {
+    top: 80%;
+    left: 90%;
+  }
+  75% {
+    top: 80%;
+    left: 0%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
