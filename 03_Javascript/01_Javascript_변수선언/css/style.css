@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.tit {
+  color: red;
+}
+.strImg {
+  width: 100px;
+}
+
+.strBg {
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+  background-color: #faf;
+}
