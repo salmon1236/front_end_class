@@ -23,5 +23,6 @@ document.write(HwSnoopy_02, "<hr />");
 // 다음으로
 var button = "";
 button += "<div class='button-container'>";
-button += "<a href='../과제 2/index.html' class='button'>다음으로</a>";
+button += "<a href='../240922_7주차_2/index.html' class='button'>다음으로</a>";
 button += "</div>";
+document.write(button);
