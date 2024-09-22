@@ -64,20 +64,24 @@ button {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+  background-color: #777;
 }
 
 #projects .logo {
   font-size: 0;
-  width: 250px;
+  width: 50px;
+  margin-right: 0 auto;
+  padding-left: 30px;
 }
 
 #projects .logo a {
-  display: block;
+  display: flex;
   padding: 28px 0;
 }
 
 #projects .logo a img {
   width: 42px;
+  /* 이미지 크기 */
 }
 
 /* 메뉴 */
@@ -89,11 +93,13 @@ button {
 .menu > ul {
   padding: 20px;
   display: flex;
+  margin: 0 10px;
+  gap: 30px;
 }
 
 .menu ul > li {
   color: #fff;
-  font-size: 24px;
+  font-size: 26px;
   margin: 0;
   position: relative;
   list-style: none;
@@ -121,7 +127,7 @@ button {
   left: 0;
   background-color: #444;
   padding: 10px;
-  width: 100%;
+  width: calc(100% + 40px);
   transition: max-height 0.3s;
   overflow: hidden;
 }
@@ -132,10 +138,10 @@ button {
 
 .submenu > li > a {
   text-align: left;
-  padding: 10px;
+  padding: 30px;
   background-color: #444;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   transition: background-color 0.3s;
   display: block;
 }
