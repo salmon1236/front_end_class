@@ -127,7 +127,7 @@ button {
   left: 0;
   background-color: #444;
   padding: 10px;
-  width: calc(100% + 40px);
+  width: calc(100% + 0px);
   transition: max-height 0.3s;
   overflow: hidden;
 }
@@ -152,7 +152,7 @@ button {
 }
 
 .submenu h3 {
-  font-size: 14px;
+  font-size: 12px;
   color: #bbb;
 }
 
