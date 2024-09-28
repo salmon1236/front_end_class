@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+.wrap_while {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap_while .box {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 20px;
+    border: 1px solid #000;
+}
+
+.wrap_for {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap_for .box {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 20px;
+    border: 1px solid #000;
+    background-color: #ffa;
+}
+
+.wrap{
+    padding: 10px 0;
+    background-color: #eee;
+}
+.wrap .outer {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.wrap .outer .box {
+    width: calc(25% - 20px);
+    height: 120px;
+    background-color: #ff9;
+    background-position: 50% 50%;
+    background-size: cover;
+    margin: 0 10px 10px;
+}
