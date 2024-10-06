@@ -267,3 +267,25 @@ console.log(_colorTxt); // ['레드', '오렌지', '옐로', '그린']   >>>   �
   - splice(): 원본 데이터의 변경 원인(삭제)   >>>   원본 데이터가 중심
   - slice(): 원본 데이터의 변경 없음   >>>   잘라낸 데이터가 중심
 */
+
+
+
+
+
+
+
+
+
+// 반복문을 활용한 배열 데이터의 나열
+let petImg = [
+  "img_01.jpg",
+  "img_02.jpg",
+  "img_03.jpg",
+  "img_04.jpg"
+];
+
+for(let i =0 ; i < petImg.length; i++){
+  console.log(i);
+  console.log(petImg[i]);
+  document.write(`<img src="./img/${petImg}">`);
+}
