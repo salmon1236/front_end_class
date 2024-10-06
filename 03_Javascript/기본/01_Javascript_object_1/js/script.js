@@ -301,4 +301,113 @@ var sketch = "3,000";
 // ??
 
 // var total = ?
-document.write(`[최종 결과] 현재 총 구입금액은 ${total}원 입니다.`);
+// document.write(`[최종 결과] 현재 총 구입금액은 ${total}원 입니다.`);
+
+
+// "2,000,000"
+let $num1 = "2,000,000";
+let $ch_num1 = $num1.replace("," , "");
+console.log($ch_num1);
+
+let $ch_num3 = $num1.replace(/,/g,"");
+console.log($ch_num3); //2000000
+
+/* 
+[정규식 표현] 
+/,/g
+// : ""
+/,/ : ","
+g: global의 약자 >>> 전역 검색(동일하게 구성된 모든것을 검색)
+*/
+
+let bad_sentence = "삐삐삐, 뿌뿌뿌, 삐삐삐";
+console.log(bad_sentence.replace(/삐삐삐/g,"@@@"));
+
+
+
+
+// 문자 데이터로부터 특정 문자를 추출할 때 사용되는 방법,
+
+// substr(a,b)
+let _txt = "프론트엔드 주말과정";
+// substr(인덱스 번호, 지정한 인덱스 번호로부터 자를 문자의 개수)
+
+let _select_txt = _txt.substr(3,2);
+console.log(_select_txt); // 엔드
+let _sel_txt = _txt.substr(5,4);
+console.log(_sel_txt); // 주말과
+
+// slice(a,b)
+// slice(a, b): a 시작되는 인덱스 번호로부터 b 인덱스 번호 이전까지만 추출
+let slice_txt = _txt.slice(1,3);
+console.log(slice_txt);
+let slice_last = _txt.slice(-1);
+console.log(slice_last); // 맨 머자먹 한 문자만 추출
+let slice_last2 = _txt.slice(-2);
+console.log(slice_last2); // 맨 머자먹 두 문자만 추출
+
+let name = "홍길동"; // 홍길*
+console.log(name.slice (0,2) + "*");
+
+// 문자 데이터의 전체 문자 개수를 가져오는 length속성
+let address = "서울시 강남구 역삼동";
+let address_length = address.length;
+console.log(address_length) // 11(공백포함 - number)
+
+// 사용자가 휴대폰 번호를 입력했는데, 개인정보상 맨 뒷자리 4개만 "****"로 표기해야 한다면
+let phNumber1 = "01012345678"; // "0101234****"
+let phNumber_substr1 = phNumber1.substr(0,7);
+console.log(phNumber_substr1 + "****");
+let phNumber_slice1 = phNumber1.slice(0,7);
+console.log(phNumber_slice1 + "****");
+
+// 사용자의 입력 형태가 여러가지일 경우
+// 0191234567(10), 01012345678(11), 010-1234-5678(13), +0082 1012345678(15)
+let phNumber2 = "+00821012345678"; // +0082101234****
+let phNumber_substr2 = phNumber2.substr(0, phNumber2.length - 4)
+console.log(phNumber_substr2 + "****");
+
+// [중간실습1] "1234-5678-****-****" 문자로 변경
+let card1 = "1234-5678-9876-5432";
+let card_recipe1 = card1.substr(0,card1.length - 9) + "****-****";
+console.log(card_recipe1);
+
+// [중간실습2] "1234-5678-9876-5432" >>>  "1234-****-****-5432" 문자로 변경
+let card2 = "1234-5678-9876-5432";
+let card_recipe2 = card2.slice(0,5) + "****-****" + card2.slice(14,19);
+// let card_recipe2 = card2.substr(0,5) + "****-****" + card2.substr(14,15);
+console.log(card_recipe2);
+
+
+// split("특정문자"): 특정 문자를 기준으로 배열 데이터(["데이터1", "데이터2", ...])로 분리시킴
+let card3 = "1234-5678-9876-5432";
+let card_split = card3.split("-");
+console.log(card_split);
+console.log(card_split[0]);
+
+card_recipe3 = card_split[0] + "****-***-" + card_split[3];
+console.log(card_recipe3);
+
+// 변수명1.concat(변수명2): 변수명 1에 변수명 2를 결합시킨다.
+let snack1 = "오징어";
+let snack2 = "땅콩";
+let rst_concat = snack1.concat(snack2);
+console.log(rst_concat);
+
+// 변수명.trim(): 변수명에 존재하는 앞뒤의 공백을 제거한다. 검색창 또는 입력창을 갖고 있는 곳은 무조건 달아준다
+let searchWord = "                경복궁 이집트               ";
+console.log(searchWord.length);
+let trimWord = searchWord.trim();
+console.log(trimWord);
+console.log(trimWord.length);
+console.log(trimWord.split(" "));
+
+// 문자 객체에서 반드시 기억해야 할 부분
+/*
+indexOf ("찾을 문자")   >>>   -1 일 경우, 찾는 문자 없음 / 0 ~ 양의 정수 인덱스번호: 찾을 문자가 존재
+replace ("바꿀문자","새문자")
+substr ("인덱스번호,자를개수")
+split ("특정문자")   >>>   "특정문자"를 기준으로 배열 데이터화 시킴
+trim ()   >>>   전후 공백 제거
+length   >>>   문자 데이터의 길이를 측정(문자의 개수) !== byte(문자의 용량)
+*/
