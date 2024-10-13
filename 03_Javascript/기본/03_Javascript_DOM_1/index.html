@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_Javascript_DOM_1</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h3 class="titleTest" id="titTestId">타이틀 테스트1</h3>
+    <h3 class="titleTest" id="titTestId">타이틀 테스트2</h3>
+
+    <h2>선택자 : 직접선택자(원거리선택자), 간접선택자(인접선택자)</h2>
+    <h3>직접선택자(원거리선택자)</h3>
+    <p>#1. id 선택자 : 태그 내부에 존재하는 id값을 기준으로 선택</p>
+    <p>
+      #2. 클래스 선택자 : 여러가지 클래스를 보유하고 있는 모든 태그를 선택.
+      배열리스트로 확보 => 인덱스 번호가 존재
+    </p>
+    <p>
+      #3. 태그 선택자 : 여러가지 태그를 모두 선택. 배열리스트로 확보 => 인덱스
+      번호가 존재 (문서상에 존재하는 body 라는 태그도 동일)
+    </p>
+    <p>
+      #4. 특정명칭을 기반으로 선택(querySeletor) : CSS상에서 선택하였던 모든
+      방식으로 지정 가능. 단일 선택자
+    </p>
+    <p>
+      #5. 특정명칭을 기반으로 다수를 선택(querySeletorAll) : CSS상에서
+      선택하였던 모든 방식으로 지정 가능. 다수를 선택하기에 배열리스트로 확보 =>
+      인덱스 번호가 존재
+    </p>
+
+    <h4>#1. id 선택자</h4>
+    <div id="id_txt">아이디 선택자</div>
+
+    <h4>#2. 클래스 선택자</h4>
+    <div>
+      <p class="trip">파리</p>
+      <p class="trip">런던</p>
+      <p class="trip">로마</p>
+      <p class="trip">마드리드</p>
+      <p class="trip">빈</p>
+    </div>
+
+    <h4>#3. 태그 선택자</h4>
+    <div id="tag_selector">
+      <h6>아마존</h6>
+      <h6>애플</h6>
+      <h6>테슬라</h6>
+    </div>
+
+    <h4>
+      #4. querySelector("CSS 상에 선택할 수 있는 선택자의 형태") => 단일 선택
+    </h4>
+    <div class="query_unit">
+      <p class="fav_01">민트초코</p>
+      <p class="fav_01">엄마는 외계인</p>
+      <p class="fav_02">슈팅스타</p>
+      <p class="fav_03">애플민트</p>
+    </div>
+
+    <h4>
+      #5. querySelectorAll("CSS 상에 선택할 수 있는 선택자의 형태") => 다수선택
+    </h4>
+    <div class="all_unit">
+      <p>레드</p>
+      <p>오렌지</p>
+      <p>옐로우</p>
+      <p>그린</p>
+    </div>
+
+    <h2>문서 조작</h2>
+    <h3>속성(properties) 조작</h3>
+    <div>
+      <img
+        id="cardEvent"
+        src="./img/ace.png"
+        alt="카드 앞면"
+        style="width: 40px"
+        onmouseover="this.src='./img/card.png'"
+        onmouseout="this.src='./img/ace.png'"
+      />
+    </div>
+    <div>
+      <img
+        id="kids"
+        src="./img/boy.png"
+        alt="남자아이"
+        style="width: 60px"
+      />
+    </div>
+
+    <h3>문서 객체 조작과 이벤트</h3>
+    <div class="moveImg">
+      <button onclick="moveRight();">오른쪽으로 이동</button>
+      <button onclick="moveLeft();">왼쪽으로 이동</button>
+    </div>
+    <div class="targetCover">
+      <img 
+      id="targetImg" 
+      class="tImg"
+      src="./img/work.jpg" 
+      alt="이동하는 이미지"
+      />
+    </div>
+    <hr/>
+
+    <h3>클래스명 조작</h3>
+
+    <div class="change_bgc">
+      <button onclick="changeBg();">색상변경</button>
+      <div class="bgcolor"></div>
+    </div>
+
+
+
+    <h4>엘리베이터 버튼에서 선택과 취소</h4>
+    <div class="elevatorButton">
+      <div class="number">
+        <button onclick="onOffBtn();">3</button>
+      </div>
+    </div>
+
+    <h4>로그인 버튼 + 암막(버튼 클릭시 로그인 박스 + 암막)</h4>
+    <div class="pop_region">
+      <button onclick="loginOpen();">로그인</button>
+    </div>
+
+    <div class="dark_bg" onclick="loginClose();"></div>
+
+    <div class="popup">
+      <div class="close" onclick="loginClose();">×</div>
+      <form action="">
+        <div class="inputLine">
+          <input type="text" placeholder="ID">
+        </div>
+        <div class="inputLine">
+          <input type="password" placeholder="PW">
+        </div>
+        <div class="inputBtn">
+          <button type="submit">LOGIN</button>
+        </div>
+      </form>
+    </div>
+
+
+
+
+    <h4>메뉴: 햄버그 아이콘 클릭에 의한 메뉴 보여주기</h4>
+    <div class="menu_icon">
+      <button onclick="openMenu();"><ion-icon name="menu-outline"></ion-icon></button>
+    </div>
+
+    <div class="res_menu">
+      <div class="close" onclick="openMenu();"><ion-icon name="close-outline"></ion-icon></div>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Project</a></li>
+        <li><a href="#">PortFolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

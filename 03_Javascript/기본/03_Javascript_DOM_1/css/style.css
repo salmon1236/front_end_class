@@ -1,0 +1,206 @@
+@charset "utf-8";
+#kids{
+  border: 1px solid #f90;
+}
+#kids.kidsImg {
+  border: 1px dashed #f00;
+}
+
+
+
+.targetCover {
+  position: relative;
+  height: 300px;
+}
+.targetCover .tImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left 1s;
+  height: 60px;
+}
+
+.targetCover .tImg.active {
+  left: 400px;
+}
+
+
+
+
+.change_bgc {}
+.change_bgc .bgcolor {
+width: 200px;
+height: 200px;
+background-color: #08f;
+transition: background-color 1s;
+}
+
+.change_bgc .bgcolor.red {
+  background-color: #f33;
+}
+
+
+
+.elevatorButton {
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  background-color: #222;
+  padding: 20px;
+}
+.elevatorButton .number {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.elevatorButton .number button {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  font-size: 80px;
+  border: 6px solid #a00;
+  color: #a00;
+  background-color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+.elevatorButton .number button.active {
+  border: 6px solid #f00;
+  color: #f00;
+  box-shadow: 0 0 10px #f00;
+  text-shadow: 0 0 10px #f00;
+}
+
+
+/* /////////////////////////////////////////// */
+
+.pop_region {}
+.pop_region  button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: #08f;
+  color: #fff;
+  cursor: pointer;
+}
+.dark_bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -1;
+  opacity: 0;
+}
+.dark_bg.active {
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.popup {
+  position: fixed;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0;
+}
+.popup.active {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.popup .close {
+  position: absolute;
+  font-size: 40px;
+  cursor: pointer;
+  top: -50px;
+  right: -50px;
+  color: #fff;
+}
+.popup .inputLine {
+  margin-bottom: 10px;
+}
+.popup .inputLine input {
+  border: none;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #777;
+}
+.popup .inputBtn {
+  display: flex;
+  justify-content: center;
+}
+.popup .inputBtn button {
+  width: 100px;
+  padding: 10px 0;
+  cursor: pointer;
+  background-color: #08f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+
+/* /////////////////////////////////////////// */
+
+.menu_icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.menu_icon button {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+.res_menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5); 
+  transform: translateY(-100%);
+}
+.res_menu.active {
+  transform: translateY(0%);
+  transition: transform 1s;
+}
+.res_menu .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+.res_menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  gap: 16px;
+}
+.res_menu ul li {
+  text-align: center;
+}
+.res_menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
