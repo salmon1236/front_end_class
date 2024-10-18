@@ -26,7 +26,7 @@ idTxt.style.backgroundColor = "#ff0";
 var classTrip = document.getElementsByClassName("trip");
 console.log(classTrip);
 
-classTrip[2].style.color = "green";
+classTrip[2].style.color = "green"
 // 해당하는 클래스명으로 전제 스타일 적용시
 // for (i in classTrip) {
 //   classTrip[i].style.backgroundColor = "#f90";
