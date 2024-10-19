@@ -163,8 +163,58 @@
     </div>
 
 
+    <h2>문서 내의 하위요소 가져오기(get) / 조작하기(set)</h2>
+    <h3>innerHTML / innerHTML 속성 : getType / setType</h3>
+    <h4>선택자.innerHTML : 선택자의 하위요소를 가져온다.</h4>
+    <h4>
+      선택자.innerHTML = "새로운 값(태그 인정)" : 선택자의 하위요소에 새로운
+      값으로 변경
+    </h4>
 
+    <div class="in_HTML">
+      <img src="./img/coffee-blue.jpg" alt="커피 스토리" />
+      <p>커피 사진-1</p>
+    </div>
 
+    <h3>innerText / innerText 속성 : getType / setType</h3>
+    <h4>선택자.innerText : 선택자의 하위에 존재하는 텍스트만 가져온다.</h4>
+    <h4>
+      선택자.innerText = "새로운 값(태그를 인정하지 않음)" : 선택자의 하위에
+      새로운 값으로 변경
+    </h4>
+
+    <div class="inText">
+      <img src="./img/pic-1.jpg" alt="" />
+      <p>배경1</p>
+    </div>
+
+    <h4>리뷰: 장문의 일부를 숨겼다가 "+더보기" 클릭시, 노출을 해주어야 한다면</h4>
+    <div class="review1">
+      <p>
+        이 약관은 주식회사 지마켓(이하 “회사”라 함)가 운영하는 “G마켓” 인터넷 오픈마켓 사이트 (www.gmarket.co.kr, 이하 “G마켓”이라 함)와 스마트폰 등 이동통신기기를 통해 
+        <span class="add_review">
+          제공되는 ‘G마켓’ 모바일 애플리케이션(이하 “모바일G마켓”이라고 합니다)을 통해서 제공하는 전자상거래 관련 서비스 및 기타 서비스 (이하 “서비스”라 함)를 이용하는 자간의 권리, 의무를 확정하고 이를 이행함으로써 상호 발전을 도모하는 것을 그 목적으로 합니다.
+        </span>
+        <div class="detail">
+          <span class="more" onclick="reviewMoew();">＋더보기</span>
+        </div>
+      </p>
+    </div>
+
+  <h4> 탭박스</h4>
+  <div class="tabSpace">
+    <div class="top"></div>
+    <div class="thumb">
+      <ul>
+        <!-- <li class="active" onclick="firstTab();"></li>
+        <li onclick="secondTab();"></li>
+        <li onclick="thirdTab();"></li> -->
+        <li rel="0" class="active" onclick="changeTab(0)"></li>
+        <li rel="1" onclick="changeTab(1)"></li>
+        <li rel="2" onclick="changeTab(2)"></li>
+      </ul>
+    </div>
+  </div>
 
 
 

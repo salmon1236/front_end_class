@@ -140,3 +140,114 @@ function loginClose(){
 
 // 메뉴: 햄버그 아이콘 클릭에 의한 메뉴 보여주기
 var menuIcon = document.querySelector(".menu_icon");
+
+// innerHTML
+var inHTML = document.querySelector(".in_HTML");
+console.log(inHTML);
+
+var getInHTML = inHTML.innerHTML;
+console.log(getInHTML);
+
+var changeInHTML = `
+      <img src="./img/coffee-pink.jpg" alt="커피 스토리" />
+      <p>커피 사진-3</p>
+`;
+inHTML.innerHTML = changeInHTML;
+
+// innerText
+
+var inText = document.querySelector(".inText");
+console.log(inText);
+var getInText = inText.innerText;
+console.log(getInText);
+
+var changeInText = `
+  <img src="./img/pic-2.jpg" alt="" />
+  <p>배경2</p>
+`;
+inText.innerText = changeInText;
+// 변경할 하위요소까지 텍스트로 노출된다.
+
+
+/* 리뷰 +더보기 */
+var addReview = document.querySelector(".review1 .add_review");
+var detailBtn = document.querySelector(".review1 .detail");
+
+function reviewMoew (){
+  addReview.classList.add("active");
+  detailBtn.innerHTML = `
+  <span class="more" onclick="reviewLess();">-감추기</span>
+  `;
+}
+function reviewLess() {
+  addReview.classList.remove("active");
+  detailBtn.innerHTML = `
+  <span class="more" onclick="reviewMoew();">+더보기</span>
+  `;
+}
+
+// 탭박스
+var tabTop = document.querySelector(".tabSpace .top");
+var tabThumbList = document.querySelectorAll(".tabSpace .thumb ul li");
+console.log(tabThumbList); //array [li.active, li ,li]
+
+// #1. 탭박스
+// function firstTab(){
+//   tabThumbList[0].classList.add("active");
+//   tabThumbList[1].classList.remove("active");
+//   tabThumbList[2].classList.remove("active");
+//   tabTop.style.backgroundImage = `url(./img/tree-1.jpg)`;
+// }
+// function secondTab(){
+//   tabThumbList[0].classList.remove("active");
+//   tabThumbList[1].classList.add("active");
+//   tabThumbList[2].classList.remove("active");
+//   tabTop.style.backgroundImage = `url(./img/tree-2.jpg)`;
+// }
+// function thirdTab(){
+//   tabThumbList[0].classList.remove("active");
+//   tabThumbList[1].classList.remove("active");
+//   tabThumbList[2].classList.add("active");
+//   tabTop.style.backgroundImage = `url(./img/tree-3.jpg)`;
+// }
+
+// #2. 탭박스
+function firstTab(){
+  // 모든 li의 영역에서 active 클래스를 제거한다.
+  for(v of tabThumbList){
+    v.classList.remove("active");
+  }
+  // 사용자가 클릭한 곳만 active 클래스를 추가한다
+  tabThumbList[0].classList.add("active");
+  tabTop.style.backgroundImage = `url(./img/tree-1.jpg)`;
+}
+function secondTab(){
+  // 모든 li의 영역에서 active 클래스를 제거한다.
+  for(v of tabThumbList){
+    v.classList.remove("active");
+  }
+  // 사용자가 클릭한 곳만 active 클래스를 추가한다
+  tabThumbList[1].classList.add("active");
+  tabTop.style.backgroundImage = `url(./img/tree-2.jpg)`;
+}
+function thirdTab(){
+  // 모든 li의 영역에서 active 클래스를 제거한다.
+  for(v of tabThumbList){
+    v.classList.remove("active");
+  }
+  // 사용자가 클릭한 곳만 active 클래스를 추가한다
+  tabThumbList[2].classList.add("active");
+  tabTop.style.backgroundImage = `url(./img/tree-3.jpg)`;
+}
+
+// #3. 탭박스
+function changeTab(num){
+  console.log(num);
+  // 모든 li의 영역에서 active 클래스를 제거한다.
+  for(v of tabThumbList){
+    v.classList.remove("active");
+  }
+  // 사용자가 클릭한 곳만 active 클래스를 추가한다
+  tabThumbList[num].classList.add("active");
+  tabTop.style.backgroundImage = `url(./img/tree-${num+1}.jpg)`;
+}
