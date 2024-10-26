@@ -1,55 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>04_Javascript_함수</title>
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-  <h1>함수의 구성</h1>
-  <h3>버튼 클릭시, 배열 데이터에 저장된 색상을 전체 배경색으로 변경하기</h3>
-  <div>
-    <button onclick="change_Bg();">배경색 변경</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04_Javascript_함수</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>함수의 구성</h1>
+    <h3>버튼 클릭시, 배열 데이터에 저장된 색상을 전체 배경색으로 변경하기</h3>
+    <div>
+      <button onclick="change_bg();">배경색 변경</button>
+    </div>
 
-  <h3>함수문과 DOM의 결합</h3>
+    <h3>함수문과 DOM의 결합</h3>
     <img id="funcImg" src="" alt="" />
 
-  <h3>버튼 클릭했을 때 이미지 변경(pic-1.jpg ~ pic-4.jpg)</h3>
-  <div>
+    <h3>버튼 클릭했을 때 이미지 변경(pic-1.jpg ~ pic-4.jpg)</h3>
     <div>
-      <button onclick="change_img();">▶</button>
+      <div>
+        <button onclick="change_img();">다음</button>
+      </div>
+      <img id="btn_img" src="./img/pic-1.jpg" alt="" style="width: 100px" />
     </div>
-    <img id="btn_img" src="./img/pic-1.jpg" alt="" style="width: 100px;">
-  </div>
 
-  <h3>이전 버튼과 다음 버튼 클릭 시 해당하는 이미지 순차적으로 보여주기</h3>
-  <p>다음버튼 클릭시 1 > 2 > 3 > 4 > 1 > 2 > ...</p>
-  <p>이전버튼 클릭시 4 > 3 > 2 > 1 > 4 > 3 > ...</p>
-  <div>
+    <h3>
+      이전 버튼과 다음 버튼 클릭시 해당하는 이미지 순차적으로 보여주기(파일
+      기준)
+    </h3>
+    <p>다음버튼 클릭시 1 -> 2 -> 3 -> 4 -> 1 -> 2 ->...</p>
+    <p>이전버튼 클릭시 1 -> 4 -> 3 -> 2 -> 1 -> 4 ->...</p>
     <div>
-      <button onclick="prev();">이전</button>
-      <button onclick="next();">다음</button>
+      <div>
+        <button onclick="prev();">이전</button>
+        <button onclick="next();">다음</button>
+      </div>
+      <img id="ch_img" src="./img/pic-1.jpg" alt="" style="width: 100px" />
     </div>
-    <img id="ch_img" src="./img/pic-1.jpg" alt="" style="width: 100px;" />
-  </div>
-  
 
-
-
-  <h3>이전 버튼과 다음 버튼 클릭 시 해당하는 이미지 순차적으로 보여주기(배열데이터 기준)</h3>
-  <p>다음버튼 클릭시[인덱스기준] 0 > 1 > 2 > 3 > 0 > 1 > ...</p>
-  <p>이전버튼 클릭시[인덱스기준] 0 > 3 > 2 > 1 > 0 > 3 > ...</p>
-  <div>
+    <h3>
+      이전 버튼과 다음 버튼 클릭시 해당하는 이미지 순차적으로 보여주기(배열
+      데이터 기준)
+    </h3>
+    <p>다음버튼 클릭시[인덱스 기준] 0 -> 1 -> 2 -> 3 -> 0 -> 1 ->...</p>
+    <p>이전버튼 클릭시[인덱스 기준] 0 -> 3 -> 2 -> 1 -> 0 -> 3 ->...</p>
     <div>
-      <button onclick="prevIdx();">이전</button>
-      <button onclick="nextIdx();">다음</button>
+      <div>
+        <button onclick="prevIdx();">이전</button>
+        <button onclick="nextIdx();">다음</button>
+      </div>
+      <img id="ch_imgIdx" src="./img/pic-1.jpg" alt="" style="width: 100px" />
     </div>
-    <img id="ch_imgIdx" src="./img/pic-1.jpg" alt="" style="width: 100px;" />
-  </div>
 
+    <h2>매개변수 : 함수에 원인이 되는 값을 전달하는 변수(인자값, params)</h2>
 
-  <script src="./js/script.js"></script>
-</body>
+    <h3>매개변수를 통한 회원명단 출력</h3>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>아이디</th>
+          <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody id="mem_rst">
+        <tr>
+          <td>가나다</td>
+          <td>gnd111</td>
+          <td>gnd111@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>매개변수 활용한 환경사진 보여주기</h3>
+    <div class="photoCover">
+      <div class="photo">
+        <div class="photoImg"></div>
+        <h4>환경 사진0</h4>
+      </div>
+      <div class="photo">
+        <div class="photoImg"></div>
+        <h4>환경 사진0</h4>
+      </div>
+      <div class="photo">
+        <div class="photoImg"></div>
+        <h4>환경 사진0</h4>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
 </html>

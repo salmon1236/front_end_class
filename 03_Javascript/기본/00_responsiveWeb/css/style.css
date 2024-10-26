@@ -1,0 +1,83 @@
+@charset "utf-8";
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+button{cursor: pointer;}
+
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: #faf;
+  transition: all 0.5s;
+}
+
+.wrap1#wrapId1 {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #eee;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap1#wrapId1 div {
+  width: calc(25% - 20px);
+  height: 100px;
+  margin: 0 10px 20px;
+  background-color: #adf;
+}
+
+
+
+/* max-width(최대 가로값 - 이하) vs min-width(최소 가로값 - 이상) */
+
+.minWidthBox {
+  width: 300px;
+  height: 300px;
+  background-color: #00f;
+}
+
+/* 최소 가로값 600px 이상일 때 */
+@media (min-width: 600px){
+  .minWidthBox{
+    background-color: #ff0;
+  }
+}
+/* 최소 가로값 900px 이상일 때 */
+@media (min-width: 900px){
+  .minWidthBox{
+    background-color: #f00;
+  }
+}
+
+
+/* 메뉴의 반응형 적용 */
+
+#menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #ff0;
+}
+#menu ul {
+  display: flex;
+  flex-direction: row;
+}
+#menu ul li {
+  margin: 0 15px;
+}
+#menu ul li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  background-color: #adf;
+  padding: 0 30px;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  #menu ul {
+    flex-direction: column;
+  }
+}
