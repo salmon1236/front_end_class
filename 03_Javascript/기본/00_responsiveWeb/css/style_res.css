@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* 브라우저 사이즈가 최대 768px 이하로 조정이 되었다면 */
+@media (max-width: 768px) {
+  .box1{
+    width: 100%;
+    background-color: #ffa;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrap1#wrapId1 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrap1#wrapId1 div {
+    width: calc(100% / 3 - 20px);
+  }
+  .wrap1#wrapId1 div:last-child{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap1#wrapId1 div {
+    width: calc(100% / 2 - 20px);
+  }
+  .wrap1#wrapId1 div:last-child{
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .wrap1#wrapId1 div {
+    width: calc(100% - 20px);
+  }
+
+}

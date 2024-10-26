@@ -1,18 +1,18 @@
 /*
 #1. css에서 괄호의 용도
-  () : nth-child(n)
-  {} : 스타일 선언시 --> 선택자{color:red;}
-  [] : 속성 선택자 --> 선택자[속성명="속성값"]{color:red;}
+  (): nth-child(n)
+  {}: 스타일 선언시 --> 선택자{color:red;}
+  []: 속성 선택자 --> 선택자[속성명="속성값"]{color:red;}
 */
 
 /*
   #2. javascript에서 괄호의 용도
-  () : 메서드(명령) onclick="proceed();"
+  (): 메서드(명령) onclick="proceed();"
     : function proceed(){ 함수의 실행문 }
     : for(v of arr1){}
-  {} : function proceed(){ 함수의 실행문 } --> 중괄호의 역할은 내용을 담는 역할
+  {}: function proceed(){ 함수의 실행문 } --> 중괄호의 역할은 내용을 담는 역할
     : 객체 {key1: value1, key2: value2, ...} --> 구조체
-  [] : 배열데이터
+  []: 배열데이터
 */
 
 /* 함수 */

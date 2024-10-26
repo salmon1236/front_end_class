@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>00_responsiveWebi(반응형 웹)</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style_res.css">
+</head>
+<body>
+  <div class="box1"></div>
+  <hr/>
+  <div class="wrap1" id="wrapId1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+
+  <h3>max-width(최대 가로값 - 이하) vs min-width(최소 가로값 - 이상)</h3>
+  <div class="maxWidthBox">width 값을 줄이는 과정 (PC > Tavlet > Mobile)</div>
+  <div class="minWidthBox">width 값을 늘리는 과정 (mobile > Tavlet > PC)</div>
+  <hr />
+
+  <h3>메뉴의 반응형 적용</h3>
+  <p>#1. PC의 펼침 메뉴와 Mobile의 숨김 메뉴를 두가지 영역으로 별도로 가져가는 방법: 수정사항 발생시에 두가지 요소를 찾아서 변경해야 함</p>
+  <p>#2. 펼침메늉화 숨김메뉴를 한가지 영역으로 가져가는 방법: 수정사항 발생 시 한번에 수정 가능</p>
+
+  <nav id="menu">
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Project</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h3>반응형 스타일 적용시 주의사항</h3>
+  <p>#1. 선택자의 명시도 주의할 것</p>
+  <p>#2. max-width or min-wldth로 선언할 것인지 확인</p>
+  <p>#3. 최초의 값에서 변경하지 않는 값은 media쿼리에서 작성하지 않는다.</p>
+</body>
+</html>
