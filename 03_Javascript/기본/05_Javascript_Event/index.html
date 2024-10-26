@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_Javascript_Event</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>이벤트</h1>
+    <h3>
+      이벤트란, 사용자가 일련의 동작을 수행하는 과정에서 함수문을 호출하여
+      실행한 후 결과로써 피드백을 받는 과정
+    </h3>
+    <p>- 요소 대상 이벤트 : 클릭(click), 마우스(mouse), 키보드(keyboard)</p>
+    <p>- 전체 대상 이벤트 : load, resize, scroll</p>
+    <p>- form 대상 이벤트 : submit, change</p>
+
+    <h4>이벤트를 진행할 수 있는 함수호출 방법 - 외부스크립트 연동시</h4>
+    <p>1. 태그 내부에 on이벤트명="함수호출문();"</p>
+    <button onclick="evtFunc1();">이벤트 실행1</button>
+
+    <p>2. (in Javascript) 선택자.on이벤트명 = 함수호출문</p>
+    <button id="evtBtn2">이벤트 실행2</button>
+
+    <p>
+      3. (in Javascript) 선택자.addEventListener("이벤트명", function(){ 함수
+      실행문 })
+    </p>
+    <button id="evtBtn3">이벤트 실행3</button>
+
+    <hr />
+    <h2>요소 대상 이벤트 : mouseover & mouseout</h2>
+
+    <img
+      id="ch_img0"
+      src="./img/tree-1-thumb.jpg"
+      onmouseover="this.src='./img/tree-2-thumb.jpg'"
+      onmouseout="this.src='./img/tree-1-thumb.jpg'"
+      alt=""
+    />
+
+    <h3>#1. 직접 함수 호출</h3>
+    <img
+      id="ch_img1"
+      src="./img/tree-1-thumb.jpg"
+      alt=""
+      onmouseover="mouseover1();"
+      onmouseout="mouseout1();"
+    />
+
+    <h3>#2. 외부 자바스크립트에서 이벤트 실행 (on이벤트명 적용)</h3>
+    <img id="ch_img2" src="./img/tree-1-thumb.jpg" alt="" />
+
+    <h3>#3. 외부 자바스크립트에서 이벤트 실행 (addEventListener 적용)</h3>
+    <img id="ch_img3" src="./img/tree-1-thumb.jpg" alt="" />
+
+    <h2>요소대상이벤트 : click</h2>
+    <button class="showBtn">이미지 나와라~</button>
+    <div class="showing">
+      <!-- <img src="./img/flower1.jpg" alt=""> -->
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
