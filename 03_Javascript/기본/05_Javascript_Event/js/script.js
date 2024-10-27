@@ -62,8 +62,6 @@ var showing = document.querySelector(".showing");
 showBtn.addEventListener("click", function () {
   showing.innerHTML = `<img src="./img/flower1.jpg" alt="">`;
 });
-<<<<<<< HEAD
-=======
 
 
 
@@ -207,4 +205,3 @@ window.addEventListener("scroll", function(){
     rightPart.classList.remove("active");
   }
 })
->>>>>>> 721d862cc4d7b927a45a766c906f72fdd1a0a711
