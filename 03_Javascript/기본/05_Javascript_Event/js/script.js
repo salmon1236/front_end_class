@@ -197,7 +197,7 @@ var leftPart = document.querySelector("#view .left_part");
 var rightPart = document.querySelector("#view .right_part");
 window.addEventListener("scroll", function(){
   var scrollTop = window.scrollY;
-  if (scrollTop > 1700){
+  if (scrollTop > 1500){
     leftPart.classList.add("active");
     rightPart.classList.add("active");
   } else {
