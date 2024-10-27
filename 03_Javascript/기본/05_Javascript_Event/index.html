@@ -61,8 +61,6 @@
       <!-- <img src="./img/flower1.jpg" alt=""> -->
     </div>
 
-<<<<<<< HEAD
-=======
     <h3>게임 캐릭터의 충전</h3>
     <div>
       <button class="move">이동(-5)</button>
@@ -116,7 +114,35 @@
       </div>
     </div>
 
->>>>>>> 721d862cc4d7b927a45a766c906f72fdd1a0a711
+    <h1>폼 대상 이벤트 : submit, change</h1>
+    <h2>
+      change 이벤트의 용도 : input 또는 textarea에서 입력값의 존재 유무,
+      글자수의 개수 / 라디오버튼 또는 체크박스에서 선택값의 변경 유무 / select
+      태그에서 변경된 value값을 가져와서 적용할 수 있음
+    </h2>
+
+    <h3>자기소개서 입력란</h3>
+    <textarea name="myIntro" id="myEssay" maxlength="100"></textarea>
+    <p>현재 글자수 : <span class="typing_num">0</span></p>
+
+    <h3>셀렉트 박스에서의 change 이벤트의 적용</h3>
+    <h4>당신이 선호하는 뷰티 브랜드</h4>
+    <select name="" id="fav_cosmetic">
+      <option>---선택---</option>
+      <option value="이니스프리">이니스프리</option>
+      <option value="더바디샾">더바디샾</option>
+      <option value="더페이스샵">더페이스샵</option>
+      <option value="러쉬">러쉬</option>
+    </select>
+    <p>내가 선호하는 브랜드: <span class="fav_brand">--</span></p>
+
+    <h3>전송 이벤트</h3>
+    <form id="input_form" action="">
+      <input id="input_value" type="text" />
+      <input type="submit" value="전송" />
+    </form>
+    <p>전송된 value 값 : <span class="input_rst">--</span></p>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

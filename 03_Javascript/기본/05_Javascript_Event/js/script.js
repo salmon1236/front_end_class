@@ -4,7 +4,7 @@ function evtFunc1() {
 }
 
 // 2. (in Javascript) 선택자.on이벤트명 = 함수호출문
-var evtBtn2 = document.querySelector("#evtBtn2");
+let evtBtn2 = document.querySelector("#evtBtn2");
 console.log(evtBtn2);
 evtBtn2.onclick = evtFunc2;
 
@@ -17,7 +17,7 @@ function sample() {
   console.log("sample 함수 실행");
 }
 
-var evtBtn3 = document.querySelector("#evtBtn3");
+let evtBtn3 = document.querySelector("#evtBtn3");
 evtBtn3.addEventListener("click", function () {
   console.log("evtFunc3 실행");
   sample();
@@ -25,7 +25,7 @@ evtBtn3.addEventListener("click", function () {
 
 // ///요소 대상 이벤트 : mouseover & mouseout////
 // #1. 직접 함수 호출
-var chImg1 = document.querySelector("#ch_img1");
+let chImg1 = document.querySelector("#ch_img1");
 function mouseover1() {
   chImg1.setAttribute("src", "./img/tree-2-thumb.jpg");
 }
@@ -33,7 +33,7 @@ function mouseout1() {
   chImg1.setAttribute("src", "./img/tree-1-thumb.jpg");
 }
 // #2. 외부 자바스크립트에서 이벤트 실행 (on이벤트명 적용)
-var chImg2 = document.querySelector("#ch_img2");
+let chImg2 = document.querySelector("#ch_img2");
 chImg2.onmouseover = mouseover2;
 chImg2.onmouseout = mouseout2;
 
@@ -45,7 +45,7 @@ function mouseout2() {
 }
 
 // #3. 외부 자바스크립트에서 이벤트 실행 (addEventListener 적용)
-var chImg3 = document.querySelector("#ch_img3");
+let chImg3 = document.querySelector("#ch_img3");
 
 chImg3.addEventListener("mouseover", function () {
   chImg3.setAttribute("src", "./img/tree-2-thumb.jpg");
@@ -56,8 +56,8 @@ chImg3.addEventListener("mouseout", function () {
 });
 
 // 요소대상이벤트 : click
-var showBtn = document.querySelector(".showBtn");
-var showing = document.querySelector(".showing");
+let showBtn = document.querySelector(".showBtn");
+let showing = document.querySelector(".showing");
 
 showBtn.addEventListener("click", function () {
   showing.innerHTML = `<img src="./img/flower1.jpg" alt="">`;
@@ -66,16 +66,16 @@ showBtn.addEventListener("click", function () {
 
 
 // 게임 캐릭터의 충전
-var hero = {
+let hero = {
   name: "토마토재배자",
   level: 1,
   hp: 100,
 };
-var hp_max = hero.hp; // 100
+let hp_max = hero.hp; // 100
 
-var moveBtn = document.querySelector(".move");
-var addHpBtn = document.querySelector(".add_hp");
-var curState = document.querySelector(".cur_state");
+let moveBtn = document.querySelector(".move");
+let addHpBtn = document.querySelector(".add_hp");
+let curState = document.querySelector(".cur_state");
 
 // 이동이라는 버튼을 클릭시, 생명력을 -5씩 감소
 moveBtn.addEventListener("click", function () {
@@ -105,9 +105,9 @@ addHpBtn.addEventListener("click", function () {
 
 ////////////////////////////////////////////////////////////////////////////////
 // 요소 대상 이벤트: keyboard 이벤트
-var inputBox = document.querySelector(".input_box");
-var searchWord = document.querySelector(".search_word");
-var searchRst = document.querySelector(".serch_rse");
+let inputBox = document.querySelector(".input_box");
+let searchWord = document.querySelector(".search_word");
+let searchRst = document.querySelector(".serch_rse");
 inputBox.addEventListener(
   "keydown",
   function(evt){
@@ -120,7 +120,7 @@ inputBox.addEventListener(
     console.log(evt.keyCode);
     console.log(inputBox.value);
   
-    var input_word = inputBox.value.trim(); // 검색어 전후의 공백을 제거한 값 
+    let input_word = inputBox.value.trim(); // 검색어 전후의 공백을 제거한 값 
     console.log(input_word);
 
     if (input_word == ""){
@@ -136,14 +136,14 @@ inputBox.addEventListener(
 });
 
 // 마우스 이동을 통한 이미지 교체
-var move1 = document.querySelector("#move1"); // 마우스 무브 이벤트가 발생할 장소를 지정
-var cover = document.querySelector(".cover");
+let move1 = document.querySelector("#move1"); // 마우스 무브 이벤트가 발생할 장소를 지정
+let cover = document.querySelector(".cover");
 
 move1.addEventListener("mousemove", function(e){
 
   // console.log("마우스 무브 이벤트 발생")
   // console.log(e);
-  var current_x = e.pageX;
+  let current_x = e.pageX;
   console.log(`지정한 공간(#move1)에서 x좌표의 위치 : ${current_x}`);
   cover.style.width = current_x + "px";
 })
@@ -156,11 +156,11 @@ move1.addEventListener("mousemove", function(e){
 
 /////////////////////////////////////////////////////////////////////////////////////
 // 전체 대상 이벤트: resize 이벤트
-var size = document.querySelector(".resize_space .size");
-var diviceName = document.querySelector(".resize_space .diviceName");
+let size = document.querySelector(".resize_space .size");
+let diviceName = document.querySelector(".resize_space .diviceName");
 
 function resizeEvt(){
-  var window_width = window.innerWidth;
+  let window_width = window.innerWidth;
   console.log("현재 브라우저의 가로 사이즈 : ", window_width);
 
   size.textContent = window_width
@@ -189,14 +189,14 @@ resizeEvt() // 최초 함수 실행(리사이즈 이벤트에서는 반드시 �
 window.addEventListener("scroll", function(e){
   console.log("스크롤 이벤트 발생");
   console.log(e);
-  var scrollTop = window.scrollY;
+  let scrollTop = window.scrollY;
   console.log("브라우저 상단으로부터 스크롤바가 이동된 거리 : ", scrollTop);
 })
 
-var leftPart = document.querySelector("#view .left_part");
-var rightPart = document.querySelector("#view .right_part");
+let leftPart = document.querySelector("#view .left_part");
+let rightPart = document.querySelector("#view .right_part");
 window.addEventListener("scroll", function(){
-  var scrollTop = window.scrollY;
+  let scrollTop = window.scrollY;
   if (scrollTop > 1500){
     leftPart.classList.add("active");
     rightPart.classList.add("active");
@@ -205,3 +205,55 @@ window.addEventListener("scroll", function(){
     rightPart.classList.remove("active");
   }
 })
+
+
+// change 이벤트
+let myEssay = document.querySelector("#myEssay");
+let typingNum = document.querySelector(".typing_num");
+
+myEssay.addEventListener("change", function () {
+  console.log("체인지 이벤트 발생");
+  console.log(myEssay.value);
+});
+// 입력상자에 작성되고(포커스 상태) 빠져나올 때(블러 상태) 값을 인지
+
+myEssay.addEventListener("keyup", function () {
+  console.log("키업 이벤트 발생");
+  console.log(myEssay.value);
+  console.log(typeof myEssay.value); // string
+  console.log(myEssay.value.length);
+  if (myEssay.value.length > 100) {
+    alert("최대 작성 가능한 글자수는 100자까지 입니다.");
+  } else {
+    typingNum.textContent = myEssay.value.length;
+  }
+});
+
+
+// 당신이 선호하는 뷰티 브랜드
+let favCosmetic = document.querySelector("#fav_cosmetic");
+let favCosmeticOpt = document.querySelectorAll("#fav_cosmetic option");
+console.log("favCosmeticOpt");
+let favBrand = document.querySelector(".fav_brand")
+
+
+
+favCosmetic.addEventListener("change", function(){
+  console.log("체인지 이벤트 발생");
+  favCosmeticOpt[0].setAttribute("disabled", "true");
+  console.log(favCosmetic.value);
+  favBrand.textContent = favCosmetic.value;
+})
+
+
+// 전송 이벤트
+let inputForm = document.querySelector("#input_form");
+let inputValue = document.querySelector("#input_value");
+let inputRst = document.querySelector(".input_rst");
+
+inputForm.addEventListener("submit", function (e) {
+  e.preventDefault(); // 폼 태그 내부의 action으로 인한 초기화되는 부분을 막는다.
+  console.log("submit 이벤트 발생");
+  console.log("전송된 값 : ", inputValue.value);
+  inputRst.textContent = inputValue.value;
+});
