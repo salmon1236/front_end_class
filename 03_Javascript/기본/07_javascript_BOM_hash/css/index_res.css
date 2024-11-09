@@ -1,0 +1,24 @@
+/* index_res.css */
+
+@media (max-width: 1199px){
+  section .wrap {
+    width: 100%;
+    padding: 0 20px;
+  }
+  section .wrap .cont {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px){
+  main {
+    height: 280px;
+  }
+  section {
+    padding: 40px 0 30px;
+  }
+  section .wrap .cont div {
+    width: calc(100% - 20px);
+    height: 220px;
+  }
+}
