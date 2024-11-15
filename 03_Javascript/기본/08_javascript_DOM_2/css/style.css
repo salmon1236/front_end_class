@@ -48,24 +48,35 @@ button {
 }
 
 /* 이미지 슬라이드 */
+
+#slide_cover {
+  width: 100%;
+  overflow: hidden;
+}
 #slider_box {
-  width: 500px;
-  height: 340px;
-  padding: 10px 0;
-  margin-left: 800px;
+  width: 80%;
+  height: 500px;
+  /* padding: 10px 0; */
+  /* margin-left: 800px; */
   background-color: #f00;
+  position: relative;
+  margin: 0 auto;
 }
 #slider_box .slider {
   width: 500%; /*2500px*/
   height: 100%;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   display: flex;
   flex-wrap: wrap;
   background-color: #ff9;
+  margin-left: -200%;
+}
+#slider_box .slider.prev {
   margin-left: -100%;
+  transition: margin-left 0.5s;
 }
 #slider_box .slider.next {
-  margin-left: -200%;
+  margin-left: -300%;
   transition: margin-left 0.5s;
 }
 
@@ -97,4 +108,134 @@ button {
 }
 #slider_box .slider .slide.slide5 {
   background-image: url(../img/main_bg_05.jpg);
+}
+#slider_box .slider .slide h3 {
+  font-size: 24px;
+  opacity: 0;
+}
+#slider_box .slider .slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.8s;
+}
+#slider_box .slider .slide p {
+  font-size: 18px;
+  padding: 20px 0 10px;
+  opacity: 0;
+}
+#slider_box .slider .slide.active p {
+  opacity: 1;
+  transition: opacity 0.8s;
+  transition-delay: 0.8s;
+}
+#slider_box .slider .slide button {
+  width: 160px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fa0;
+  color: #fff;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+#slider_box .slider .slide.active button {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s, transform 0.8s;
+  transition-delay: 1.6s;
+}
+
+#slider_box .arrow {
+}
+#slider_box .arrow a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left 0.5s, right 0.5s;
+}
+
+#slider_box .arrow a.arrow_prev {
+  left: -40px;
+}
+#slider_box .arrow a.arrow_next {
+  right: -40px;
+}
+#slider_box.hover .arrow a.arrow_prev {
+  left: 20px;
+}
+#slider_box.hover .arrow a.arrow_next {
+  right: 20px;
+}
+
+#slider_box .arrow a img {
+  display: block;
+  height: 50px;
+}
+
+
+#slider_box .gage {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(0,0,0,0.5);
+}
+#slider_box .gage .bar {
+  width: 0;
+  height: 100%;
+  background-color: #fa0;
+}
+#slider_box.active .gage .bar {
+  width: 100%;
+  transition: width 2.5s;
+}
+
+
+
+/* 슬라이드 넘버 */
+#slider_box .slide_num {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 17px;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+}
+#slider_box .slide_num p .cur {
+  font-weight: bold;
+}
+
+/* 재생버튼 */
+#slider_box .playing_btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  /* height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1; */
+}
+#slider_box .playing_btn button {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  line-height: 1;
+  border: none;
+  padding-bottom: 7px;
 }

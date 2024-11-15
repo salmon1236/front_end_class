@@ -180,17 +180,43 @@ reserveBtn.addEventListener("click", function () {
   }, 2000);
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 /*
 [이미지 슬라이드]
- - 자동 롤링 슬라이드
- - 마우스오버시, 슬라이드 일시정지
- - next, prev 아이콘 클릭시 이미지가 좌우로 넘어가도록 구성
+- 자동 롤링 슬라이드
+- 마우스오버시, 슬라이드 일시정지
+- next, prev 아이콘 클릭시 이미지가 좌우로 넘어가도록 구성
 */
 // #1. 선택자 구성
 var sliderBox = document.querySelector("#slider_box");
 var slider = document.querySelector(".slider");
 var slide = document.querySelectorAll(".slide");
 console.log(slide);
+
+var prevBtn = document.querySelector(".arrow_prev");
+var nextBtn = document.querySelector(".arrow_next");
+
+var curNum = document.querySelector(".slide_num .cur");
+var totalNum = document.querySelector(".slide_num .total");
+
+totalNum.textContent = slide.length; // 슬라이드의 전체개수 지정
+
+var playingBtn = document.querySelector(".playing_btn button");
+
+
 /*
 NodeList(5)
 0: div.slide.slide1
@@ -203,12 +229,34 @@ NodeList(5)
 // #2. 초기 위치 설정(마지막 이미지 슬라이드를 맨 좌측으로 배치 5-1-2-3-4)
 slider.prepend(slide[slide.length - 1]);
 
+// #6. 각 슬라이드의 진입간 효과적용 
+function slideMotion(){
+  slide.forEach(function(v){
+    // 각 슬라이드에 active 클래스명을 모두 제거한다
+    console.log(v);
+    v.classList.remove("active");
+  })
+
+  // 본 영역에 진입한 슬라이드에만 active 클래스명을 부여한다.
+  var standardSlide = document.querySelector(".slide:nth-child(2)");
+  console.log(standardSlide);
+  standardSlide.classList.add("active");
+
+  // 현재 슬라이드 번호 가져오기
+  var standardSlideNum = standardSlide.getAttribute("rel");
+  curNum.textContent = standardSlideNum;
+
+}
+slideMotion() // 최초 로딩했을 때, 함수 호출
+
 // #3. 자동 반복 설정
 setInterval(function () {
   var isHover = sliderBox.classList.contains("hover"); // true 또는 false
-  if (isHover == true) {
+  var isStop = sliderBox.classList.contains("stop");
+  if (isHover == true || isStop == true) {
     // (슬라이드 영역으로 마우스오버된 상태) 아무것도 하지마~!!
   } else {
+    sliderBox.classList.remove("active");
     // (최초 로딩 또는 슬라이드 영역에서 마우스아웃된 상태)자동 슬라이드 모드 설정
     var firstSlide = document.querySelector(".slide:first-child");
 
@@ -224,6 +272,9 @@ setInterval(function () {
       slider.classList.remove("next"); // margin-left: -200% --> margin-left: -100%
       // slider.style.marginLeft = "-100%";
       // slider.style.transition = "margin-left 0s";
+      slideMotion();
+      
+      sliderBox.classList.add("active");
     }, 500);
   }
 }, 3000);
@@ -243,3 +294,79 @@ sliderBox.addEventListener("mouseover", function () {
 sliderBox.addEventListener("mouseout", function () {
   sliderBox.classList.remove("hover");
 });
+
+// #5. 양쪽 화살표 클릭시 해당하는 슬라이드 이미지 보여주기
+// #5-1. 이전 (<) 버튼 클릭시 좌측의 이미지가 본 영역으로 들어온다. (prepend()활용)
+
+
+prevBtn.addEventListener("click" , function(e){ // e = event
+e.preventDefault(); // a 태그 영역을 클릭했을때, href의 속성에 의한 초기화를 막는다 ('preventDefault()')
+var lastSlide = document.querySelector("#slider_box .slider .slide:last-child");
+
+slider.classList.add("prev");
+
+setTimeout(() => {
+  slider.prepend(lastSlide);
+  slider.classList.remove("prev");
+  slideMotion()
+}, 500)
+});
+
+
+// #5-2. 다음 (>) 버튼 클릭시 좌측의 이미지가 본 영역으로 들어온다. (append()활용)
+nextBtn.addEventListener("click" , function(e){ // e = event
+e.preventDefault();
+var firstSlide = document.querySelector("#slider_box .slider .slide:first-child");
+
+slider.classList.add("next");
+
+setTimeout(() => {
+  slider.append(firstSlide);
+  slider.classList.remove("next");
+  slideMotion()
+}, 500)
+});
+
+// #7. 재생 정지버튼 클릭시
+playingBtn.addEventListener("click", function(){
+  var isStopClass = sliderBox.classList.contains("stop");
+  if(isStopClass == true){
+    // 정지상태
+    sliderBox.classList.remove("stop");
+    playingBtn.textContent = "■"
+  } else {
+        sliderBox.classList.add("stop");
+    playingBtn.textContent = "▶"
+
+  }
+})
+
+
+// 금일 과제, G마켓 슬라이드 구성하기 (margin-left값)
+
+
+
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+// removeChild : 기존에 존재하는 사위의 자식을 제거한다
+var nations = document.querySelector(".removeChild_method");
+var delList = document.querySelector(".removeChild_method p:nth-child(2)");
+
+nations.removeChild(delList);
+
+// 실습: 버튼 클릭시 하나씩 제거되도록 구현(아래부터 또는 처음부터)
+var colorGroup = document.querySelector(".color_group");
+var delBtn = document.querySelector(".del_btn button");
+
+delBtn.addEventListener("click", function(){
+  try {
+    var lastChild = colorGroup.children[colorGroup.children.length - 1];
+    console.log(lastChild);
+    colorGroup.removeChild(lastChild);
+  } catch(err) {
+    console.log(err);
+  }
+});
+
+
+// try{... 실행문 ...} catch(error){예외처리 구문}   >>>   자바스크립트의 예외처리방식
+// DB로부터 CRUD(Create Read Update Delete)의 과정을 거치는 동안 데이터에 접근하지 못하는 경우 예외처리 시킴

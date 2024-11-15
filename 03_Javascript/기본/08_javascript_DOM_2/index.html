@@ -172,44 +172,88 @@
     </div>
 
     <h3>이미지 슬라이드(자동 이미지 슬라이드 + 모션 + 양방향 화살표 클릭)</h3>
-    <div id="slider_box">
-      <div class="slider">
-        <div class="slide slide1">
-          <h3>타이틀1</h3>
-          <p>배너 설명1</p>
-          <div>
-            <button>바로가기1</button>
+    <div id="slide_cover">
+      <div id="slider_box">
+        <div class="slider">
+          <div rel="1" class="slide slide1">
+            <h3>타이틀1</h3>
+            <p>배너 설명1</p>
+            <div>
+              <button>바로가기1</button>
+            </div>
+          </div>
+          <div rel="2" class="slide slide2">
+            <h3>타이틀2</h3>
+            <p>배너 설명2</p>
+            <div>
+              <button>바로가기2</button>
+            </div>
+          </div>
+          <div rel="3" class="slide slide3">
+            <h3>타이틀3</h3>
+            <p>배너 설명3</p>
+            <div>
+              <button>바로가기3</button>
+            </div>
+          </div>
+          <div rel="4" class="slide slide4">
+            <h3>타이틀4</h3>
+            <p>배너 설명4</p>
+            <div>
+              <button>바로가기4</button>
+            </div>
+          </div>
+          <div rel="5" class="slide slide5">
+            <h3>타이틀5</h3>
+            <p>배너 설명5</p>
+            <div>
+              <button>바로가기5</button>
+            </div>
           </div>
         </div>
-        <div class="slide slide2">
-          <h3>타이틀2</h3>
-          <p>배너 설명2</p>
-          <div>
-            <button>바로가기2</button>
-          </div>
+        <div class="arrow">
+          <a href="" class="arrow_prev"
+            ><img src="./img/prev_arrow.svg" alt="이전 버튼"
+          /></a>
+          <a href="" class="arrow_next"
+            ><img src="./img/next_arrow.svg" alt="다음 버튼"
+          /></a>
         </div>
-        <div class="slide slide3">
-          <h3>타이틀3</h3>
-          <p>배너 설명3</p>
-          <div>
-            <button>바로가기3</button>
-          </div>
+        <div class="gage">
+          <div class="bar"></div>
         </div>
-        <div class="slide slide4">
-          <h3>타이틀4</h3>
-          <p>배너 설명4</p>
-          <div>
-            <button>바로가기4</button>
-          </div>
+        <div class="slide_num">
+          <p>
+            <span class="cur">0</span>
+            /
+            <span class="total">0</span>
+          </p>
         </div>
-        <div class="slide slide5">
-          <h3>타이틀5</h3>
-          <p>배너 설명5</p>
-          <div>
-            <button>바로가기5</button>
-          </div>
+        <div class="playing_btn">
+          <!-- <p>▶</p> -->
+          <button>■</button>
         </div>
       </div>
+    </div>
+    
+    <h3>removeChild : 기존에 존재하는 사위의 자식을 제거한다.</h3>
+    <div class="removeChild_method">
+      <p>영국</p>
+      <p>프랑스</p>
+      <p>호주</p>
+      <p>중국</p>
+      <p>일본</p>
+    </div>
+
+    <h4>실습: 버튼 클릭시 하나씩 제거되도록 구현</h4>
+    <div class="del_btn">
+      <button>순차적으로 제거</button>
+    </div>
+    <div class="color_group">
+      <p>red</p>
+      <p>orange</p>
+      <p>yellow</p>
+      <p>blue</p>
     </div>
 
     <script src="./js/script.js"></script>
